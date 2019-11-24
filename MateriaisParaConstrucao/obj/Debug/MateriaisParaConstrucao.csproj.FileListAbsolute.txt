@@ -1,0 +1,26 @@
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.exe.config
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.exe
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.pdb
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.exe
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.pdb
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmCategorias.resources
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmClientes.resources
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmFuncionarios.resources
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmPrincipal.resources
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmProdutos.resources
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.Properties.Resources.resources
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.csproj.GenerateResource.Cache
+C:\Users\elilize\Desktop\Arquivos Servidor - Projeto Materiais para Construção\Aula 10\MateriaisParaConstrucao - final\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.csprojResolveAssemblyReference.cache
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.csprojAssemblyReference.cache
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmCategorias.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmClientes.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmFuncionarios.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmPrincipal.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmProdutos.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.Properties.Resources.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.csproj.GenerateResource.cache
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.exe
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.exe.config
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.exe
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.pdb
