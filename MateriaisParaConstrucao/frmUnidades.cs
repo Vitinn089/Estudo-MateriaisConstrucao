@@ -99,12 +99,13 @@ namespace MateriaisParaConstrucao
                         txtNome.Text = dtgUnidades.Rows[e.RowIndex].Cells["NOME_UNIDADE_PRODUTOS"].Value.ToString();
                         txtDescricao.Text = dtgUnidades.Rows[e.RowIndex].Cells["DESCRICAO_UNIDADE_PRODUTOS"].Value.ToString();
                     }
-                    else if (dtgUnidades.Columns[e.ColumnIndex].Name == "btnExcluir")
+                    else if (dtgUnidades.Columns[e.ColumnIndex].Name == "btnExcluir" && MessageBox.Show("Deseja exluir essa unidade?", "Deseja excluir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         novoProduto = new Produtos();
 
                         novoProduto.ExcluirUnidade(Convert.ToInt32(dtgUnidades.Rows[e.RowIndex].Cells["ID_UNIDADE_PRODUTOS"].Value.ToString()));
                         MessageBox.Show("Unidade deletada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Listar();
                     }
                 }
             }

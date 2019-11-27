@@ -218,7 +218,7 @@
             this.DESCRICAO_UNIDADE_PRODUTOS,
             this.btnEditar,
             this.btnExcluir});
-            this.dtgUnidades.Location = new System.Drawing.Point(12, 147);
+            this.dtgUnidades.Location = new System.Drawing.Point(12, 150);
             this.dtgUnidades.Name = "dtgUnidades";
             this.dtgUnidades.ReadOnly = true;
             this.dtgUnidades.RowHeadersVisible = false;
