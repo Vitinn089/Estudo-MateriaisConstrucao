@@ -22,5 +22,11 @@ namespace MateriaisParaConstrucao
             frmCategorias formCategoria = new frmCategorias();
             formCategoria.ShowDialog();
         }
+
+        private void btnUnidade_Click(object sender, EventArgs e)
+        {
+            frmUnidades formUnidades = new frmUnidades();
+            formUnidades.ShowDialog();
+        }
     }
 }

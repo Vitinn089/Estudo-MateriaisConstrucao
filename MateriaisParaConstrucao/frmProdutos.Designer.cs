@@ -521,6 +521,7 @@
             this.btnUnidade.Text = "Unidade";
             this.btnUnidade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUnidade.ToolTipText = "Unidade";
+            this.btnUnidade.Click += new System.EventHandler(this.btnUnidade_Click);
             // 
             // toolStripSeparator4
             // 

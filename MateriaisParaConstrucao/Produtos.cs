@@ -23,6 +23,7 @@ namespace MateriaisParaConstrucao
                     conexao.Open();
 
                     sql.Append("SELECT * FROM Categoria_produtos ");
+                    sql.Append("ORDER BY NOME_UNIDADE_PRODUTOS ASC");
 
                     comandoSql.CommandText = sql.ToString();
                     comandoSql.Connection = conexao;
@@ -111,6 +112,105 @@ namespace MateriaisParaConstrucao
             catch (Exception)
             {
                 throw new Exception("Ocorreu um erro no método 'ExcluirCategoria'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
+
+        public DataTable ListarUnidades()
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("SELECT * FROM Unidade_produtos ");
+                    sql.Append("ORDER BY NOME_UNIDADE_PRODUTOS ASC");
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    dadosTabela.Load(comandoSql.ExecuteReader());
+                    return dadosTabela;
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'ListarUnidades'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
+
+        public void SalvarUnidade(string nome, string descricao)
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("INSERT INTO Unidade_produtos(NOME_UNIDADE_PRODUTOS, DESCRICAO_UNIDADE_PRODUTOS) ");
+                    sql.Append("VALUES (@nome, @descricao)");
+
+                    comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
+                    comandoSql.Parameters.Add(new SqlParameter("@descricao", descricao));
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    comandoSql.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'SalvarUnidade'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
+
+        public void AlterarUnidade(int idUnidade, string nome, string descricao)
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("UPDATE Unidade_produtos ");
+                    sql.Append("SET NOME_UNIDADE_PRODUTOS = @nome, DESCRICAO_UNIDADE_PRODUTOS = @descricao ");
+                    sql.Append("WHERE ID_UNIDADE_PRODUTOS = @idUnidade");
+
+                    comandoSql.Parameters.Add(new SqlParameter("@idUnidade", idUnidade));
+                    comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
+                    comandoSql.Parameters.Add(new SqlParameter("@descricao", descricao));
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    comandoSql.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'AlterarUnidade'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
+
+        public void ExcluirUnidade(int idUnidade)
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("DELETE FROM Unidade_produtos ");
+                    sql.Append("WHERE ID_UNIDADE_PRODUTOS = @idUnidade");
+
+                    comandoSql.Parameters.Add(new SqlParameter("@idUnidade", idUnidade));
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    comandoSql.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'ExcluirUnidade'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
             }
         }
     }
