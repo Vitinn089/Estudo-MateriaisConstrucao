@@ -70,16 +70,14 @@ namespace MateriaisParaConstrucao
                 {
                     novoProduto.SalvarUnidade(txtNome.Text, txtDescricao.Text);
                     MessageBox.Show("Unidade cadastrada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Listar();
-                    Limpar();
                 }
                 else
                 {
                     novoProduto.AlterarUnidade(Convert.ToInt32(txtCodigo.Text), txtNome.Text, txtDescricao.Text);
                     MessageBox.Show("Unidade alterada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Listar();
-                    Limpar();
                 }
+                Listar();
+                Limpar();
             }
             catch (Exception ex)
             {

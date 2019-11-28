@@ -24,3 +24,4 @@ C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisP
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.exe
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.pdb
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmUnidades.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.csprojAssemblyReference.cache

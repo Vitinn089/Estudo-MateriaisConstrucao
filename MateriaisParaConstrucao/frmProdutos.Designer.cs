@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProdutos));
-            this.cboUnidadeProduto = new System.Windows.Forms.ComboBox();
+            this.cboUnidade = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -73,7 +73,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.dtpCadastro = new System.Windows.Forms.DateTimePicker();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtgListaProdutos = new System.Windows.Forms.DataGridView();
@@ -89,7 +89,7 @@
             this.VALOR_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALOR_VENDA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARGEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ANOTACOES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ANOTACOES_PRODUTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SITUACAO_PRODUTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DATA_CADASTRO_PRODUTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -106,15 +106,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgListaProdutos)).BeginInit();
             this.SuspendLayout();
             // 
-            // cboUnidadeProduto
+            // cboUnidade
             // 
-            this.cboUnidadeProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboUnidadeProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboUnidadeProduto.FormattingEnabled = true;
-            this.cboUnidadeProduto.Location = new System.Drawing.Point(9, 53);
-            this.cboUnidadeProduto.Name = "cboUnidadeProduto";
-            this.cboUnidadeProduto.Size = new System.Drawing.Size(182, 26);
-            this.cboUnidadeProduto.TabIndex = 9;
+            this.cboUnidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUnidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUnidade.FormattingEnabled = true;
+            this.cboUnidade.Location = new System.Drawing.Point(9, 53);
+            this.cboUnidade.Name = "cboUnidade";
+            this.cboUnidade.Size = new System.Drawing.Size(182, 26);
+            this.cboUnidade.TabIndex = 9;
             // 
             // groupBox5
             // 
@@ -478,6 +478,7 @@
             this.btnNovo.Size = new System.Drawing.Size(70, 55);
             this.btnNovo.Text = "Novo";
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
@@ -490,6 +491,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(70, 55);
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCategoria
             // 
@@ -546,7 +548,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtpData);
+            this.groupBox1.Controls.Add(this.dtpCadastro);
             this.groupBox1.Controls.Add(this.groupBox7);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.groupBox5);
@@ -567,23 +569,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FICHA";
             // 
-            // dtpData
+            // dtpCadastro
             // 
-            this.dtpData.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpData.CalendarForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dtpData.CustomFormat = "dd/MM/yyyy";
-            this.dtpData.Enabled = false;
-            this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpData.Location = new System.Drawing.Point(387, 40);
-            this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(109, 22);
-            this.dtpData.TabIndex = 2;
-            this.dtpData.TabStop = false;
+            this.dtpCadastro.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCadastro.CalendarForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dtpCadastro.CustomFormat = "dd/MM/yyyy";
+            this.dtpCadastro.Enabled = false;
+            this.dtpCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCadastro.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCadastro.Location = new System.Drawing.Point(387, 40);
+            this.dtpCadastro.Name = "dtpCadastro";
+            this.dtpCadastro.Size = new System.Drawing.Size(109, 22);
+            this.dtpCadastro.TabIndex = 2;
+            this.dtpCadastro.TabStop = false;
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.cboUnidadeProduto);
+            this.groupBox7.Controls.Add(this.cboUnidade);
             this.groupBox7.Controls.Add(this.label14);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(299, 220);
@@ -626,7 +628,7 @@
             this.VALOR_COMPRA,
             this.VALOR_VENDA,
             this.MARGEM,
-            this.ANOTACOES,
+            this.ANOTACOES_PRODUTO,
             this.SITUACAO_PRODUTO,
             this.DATA_CADASTRO_PRODUTO,
             this.btnEditar,
@@ -636,7 +638,8 @@
             this.dtgListaProdutos.ReadOnly = true;
             this.dtgListaProdutos.RowHeadersVisible = false;
             this.dtgListaProdutos.Size = new System.Drawing.Size(391, 494);
-            this.dtgListaProdutos.TabIndex = 17;
+            this.dtgListaProdutos.TabIndex = 24;
+            this.dtgListaProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListaProdutos_CellContentClick);
             // 
             // ID_PRODUTO
             // 
@@ -735,13 +738,13 @@
             this.MARGEM.ReadOnly = true;
             this.MARGEM.Visible = false;
             // 
-            // ANOTACOES
+            // ANOTACOES_PRODUTO
             // 
-            this.ANOTACOES.DataPropertyName = "ANOTACOES_PRODUTO";
-            this.ANOTACOES.HeaderText = "Anotações";
-            this.ANOTACOES.Name = "ANOTACOES";
-            this.ANOTACOES.ReadOnly = true;
-            this.ANOTACOES.Visible = false;
+            this.ANOTACOES_PRODUTO.DataPropertyName = "ANOTACOES_PRODUTO";
+            this.ANOTACOES_PRODUTO.HeaderText = "Anotações";
+            this.ANOTACOES_PRODUTO.Name = "ANOTACOES_PRODUTO";
+            this.ANOTACOES_PRODUTO.ReadOnly = true;
+            this.ANOTACOES_PRODUTO.Visible = false;
             // 
             // SITUACAO_PRODUTO
             // 
@@ -788,6 +791,7 @@
             this.Name = "frmProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produtos";
+            this.Load += new System.EventHandler(this.frmProdutos_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -813,7 +817,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboUnidadeProduto;
+        private System.Windows.Forms.ComboBox cboUnidade;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtCodigo;
@@ -857,7 +861,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.DateTimePicker dtpCadastro;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.DataGridView dtgListaProdutos;
@@ -873,7 +877,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR_COMPRA;
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR_VENDA;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARGEM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ANOTACOES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ANOTACOES_PRODUTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn SITUACAO_PRODUTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn DATA_CADASTRO_PRODUTO;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;

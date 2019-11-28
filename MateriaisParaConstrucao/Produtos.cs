@@ -23,7 +23,7 @@ namespace MateriaisParaConstrucao
                     conexao.Open();
 
                     sql.Append("SELECT * FROM Categoria_produtos ");
-                    sql.Append("ORDER BY NOME_UNIDADE_PRODUTOS ASC");
+                    sql.Append("ORDER BY NOME_CATEGORIA_PRODUTOS ASC");
 
                     comandoSql.CommandText = sql.ToString();
                     comandoSql.Connection = conexao;
@@ -211,6 +211,136 @@ namespace MateriaisParaConstrucao
             catch (Exception)
             {
                 throw new Exception("Ocorreu um erro no método 'ExcluirUnidade'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
+
+        public DataTable ListarProdutos()
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("SELECT Produtos.ID_PRODUTO, Produtos.CODIGO_BARRAS_PRODUTO, Produtos.NOME_PRODUTO, Produtos.DESCRICAO_PRODUTO,");
+                    sql.Append(" Produtos.ID_UNIDADE, Unidade_produtos.NOME_UNIDADE_PRODUTOS, Produtos.ID_CATEGORIA, Produtos.ESTOQUE_MINIMO, Produtos.ESTOQUE_ATUAL,");
+                    sql.Append(" Produtos.VALOR_COMPRA, Produtos.VALOR_VENDA, Produtos.MARGEM, Produtos.ANOTACOES_PRODUTO, Produtos.SITUACAO_PRODUTO, Produtos.DATA_CADASTRO_PRODUTO");
+                    sql.Append(" FROM (Produtos INNER JOIN Unidade_produtos ON Produtos.ID_UNIDADE = Unidade_produtos.ID_UNIDADE_PRODUTOS)");
+                    sql.Append(" ORDER BY Produtos.NOME_PRODUTO ASC");
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    dadosTabela.Load(comandoSql.ExecuteReader());
+                    return dadosTabela;
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'ListarProdutos'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
+
+        public void SalvarProduto(string codigoBarras, string nome, string descricao, int idUnidade, int idCategoria, int estoqueMinimo, 
+                                  int estoqueAtual, decimal valorCompra, decimal valorVenda, decimal margemLucro, string anotacoes, 
+                                  Boolean situacao, DateTime cadastro)
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("INSERT INTO Produtos(CODIGO_BARRAS_PRODUTO, NOME_PRODUTO, DESCRICAO_PRODUTO, ID_UNIDADE, ID_CATEGORIA,");
+                    sql.Append(" ESTOQUE_MINIMO, ESTOQUE_ATUAL, VALOR_COMPRA, VALOR_VENDA, MARGEM, ANOTACOES_PRODUTO, SITUACAO_PRODUTO, DATA_CADASTRO_PRODUTO) ");
+                    sql.Append("VALUES (@codigoBarras, @nome, @descricao, @idUnidade, @idCategoria, @estoqueMinimo, @estoqueAtual, @valorCompra, @valorVenda, @margemLucro, @anotacoes, @situacao, @cadastro)");
+
+                    comandoSql.Parameters.Add(new SqlParameter("@codigoBarras", codigoBarras));
+                    comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
+                    comandoSql.Parameters.Add(new SqlParameter("@descricao", descricao));
+                    comandoSql.Parameters.Add(new SqlParameter("@idUnidade", idUnidade));
+                    comandoSql.Parameters.Add(new SqlParameter("@idCategoria", idCategoria));
+                    comandoSql.Parameters.Add(new SqlParameter("@estoqueMinimo", estoqueMinimo));
+                    comandoSql.Parameters.Add(new SqlParameter("@estoqueAtual", estoqueAtual));
+                    comandoSql.Parameters.Add(new SqlParameter("@valorCompra",valorCompra));
+                    comandoSql.Parameters.Add(new SqlParameter("@valorVenda", valorVenda));
+                    comandoSql.Parameters.Add(new SqlParameter("@margemLucro", margemLucro));
+                    comandoSql.Parameters.Add(new SqlParameter("@anotacoes", anotacoes));
+                    comandoSql.Parameters.Add(new SqlParameter("@situacao", situacao));
+                    comandoSql.Parameters.Add(new SqlParameter("@cadastro", cadastro));
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    comandoSql.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'SalvarProduto'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
+
+        public void AlterarProduto(int codigo, string codigoBarras, string nome, string descricao, int idUnidade, int idCategoria, int estoqueMinimo,
+                                  int estoqueAtual, decimal valorCompra, decimal valorVenda, decimal margemLucro, string anotacoes,
+                                  Boolean situacao, DateTime cadastro)
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("UPDATE Produtos SET CODIGO_BARRAS_PRODUTO = @codigoBarras, NOME_PRODUTO = @nome, DESCRICAO_PRODUTO = @descricao, ID_UNIDADE = @idUnidade,");
+                    sql.Append(" ID_CATEGORIA = @idCategoria, ESTOQUE_MINIMO = @estoqueMinimo, ESTOQUE_ATUAL = @estoqueAtual, VALOR_COMPRA = @valorCompra, VALOR_VENDA = @valorVenda,");
+                    sql.Append(" MARGEM = @margemLucro, ANOTACOES_PRODUTO = @anotacoes, SITUACAO_PRODUTO = @situacao, DATA_CADASTRO_PRODUTO = @cadastro ");
+                    sql.Append("WHERE ID_PRODUTO = @codigo");
+
+                    comandoSql.Parameters.Add(new SqlParameter("@codigo", codigo));
+                    comandoSql.Parameters.Add(new SqlParameter("@codigoBarras", codigoBarras));
+                    comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
+                    comandoSql.Parameters.Add(new SqlParameter("@descricao", descricao));
+                    comandoSql.Parameters.Add(new SqlParameter("@idUnidade", idUnidade));
+                    comandoSql.Parameters.Add(new SqlParameter("@idCategoria", idCategoria));
+                    comandoSql.Parameters.Add(new SqlParameter("@estoqueMinimo", estoqueMinimo));
+                    comandoSql.Parameters.Add(new SqlParameter("@estoqueAtual", estoqueAtual));
+                    comandoSql.Parameters.Add(new SqlParameter("@valorCompra", valorCompra));
+                    comandoSql.Parameters.Add(new SqlParameter("@valorVenda", valorVenda));
+                    comandoSql.Parameters.Add(new SqlParameter("@margemLucro", margemLucro));
+                    comandoSql.Parameters.Add(new SqlParameter("@anotacoes", anotacoes));
+                    comandoSql.Parameters.Add(new SqlParameter("@situacao", situacao));
+                    comandoSql.Parameters.Add(new SqlParameter("@cadastro", cadastro));
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    comandoSql.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'AlterarProduto'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
+
+        public void ExcluirProduto(int codigo)
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("DELETE FROM Produtos ");
+                    sql.Append("WHERE ID_PRODUTO = @codigo");
+
+                    comandoSql.Parameters.Add(new SqlParameter("@codigo", codigo));
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    comandoSql.ExecuteNonQuery();
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'ExcluirProduto'. Caso o erro persista entre em contato com o Administrador do Sistema.");
             }
         }
     }
