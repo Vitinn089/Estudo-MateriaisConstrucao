@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="ClientesAcessoDados.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="FuncionariosAcessoDados.cs" />

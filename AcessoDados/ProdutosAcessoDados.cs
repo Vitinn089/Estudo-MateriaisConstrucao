@@ -343,5 +343,35 @@ namespace AcessoDados
                 throw new Exception("Ocorreu um erro no método 'ExcluirProduto'. Caso o erro persista entre em contato com o Administrador do Sistema.");
             }
         }
+
+        public DataTable PesquisarCodigoBarras(string codigoBarras)
+        {
+            try
+            {
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+                {
+                    conexao.Open();
+
+                    sql.Append("SELECT Produtos.ID_PRODUTO, Produtos.CODIGO_BARRAS_PRODUTO, Produtos.NOME_PRODUTO, Produtos.DESCRICAO_PRODUTO,");
+                    sql.Append(" Produtos.ID_UNIDADE, Unidade_produtos.NOME_UNIDADE_PRODUTOS, Produtos.ID_CATEGORIA, Produtos.ESTOQUE_MINIMO,");
+                    sql.Append(" Produtos.ESTOQUE_ATUAL, Produtos.VALOR_COMPRA, Produtos.VALOR_VENDA, Produtos.MARGEM, Produtos.ANOTACOES_PRODUTO,");
+                    sql.Append(" Produtos.SITUACAO_PRODUTO, Produtos.DATA_CADASTRO_PRODUTO ");
+                    sql.Append("FROM Produtos INNER JOIN Unidade_produtos ON Produtos.ID_UNIDADE = Unidade_produtos.ID_UNIDADE_PRODUTOS ");
+                    sql.Append("WHERE Produtos.CODIGO_BARRAS_PRODUTO LIKE '%'+@codigoBarras+'%' ");
+                    sql.Append("ORDER BY Produtos.NOME_PRODUTO");
+
+                    comandoSql.Parameters.Add(new SqlParameter("@codigoBarras", codigoBarras));
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = conexao;
+                    dadosTabela.Load(comandoSql.ExecuteReader());
+                    return dadosTabela;
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'PesquisarCodigoBarras'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
+            }
+        }
     }
 }

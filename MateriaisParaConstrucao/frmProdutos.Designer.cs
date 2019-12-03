@@ -114,7 +114,7 @@
             this.cboUnidade.Location = new System.Drawing.Point(9, 53);
             this.cboUnidade.Name = "cboUnidade";
             this.cboUnidade.Size = new System.Drawing.Size(182, 26);
-            this.cboUnidade.TabIndex = 9;
+            this.cboUnidade.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -128,7 +128,7 @@
             this.groupBox5.Location = new System.Drawing.Point(11, 120);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(485, 92);
-            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Detalhes";
             // 
@@ -172,7 +172,7 @@
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(390, 25);
-            this.txtDescricao.TabIndex = 3;
+            this.txtDescricao.TabIndex = 1;
             // 
             // cboCategoria
             // 
@@ -183,7 +183,7 @@
             this.cboCategoria.Location = new System.Drawing.Point(297, 26);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(182, 26);
-            this.cboCategoria.TabIndex = 1;
+            this.cboCategoria.TabIndex = 2;
             // 
             // label11
             // 
@@ -203,7 +203,7 @@
             this.groupBox6.Location = new System.Drawing.Point(186, 323);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(310, 164);
-            this.groupBox6.TabIndex = 12;
+            this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Anotações";
             // 
@@ -215,7 +215,7 @@
             this.txtAnotacoes.Multiline = true;
             this.txtAnotacoes.Name = "txtAnotacoes";
             this.txtAnotacoes.Size = new System.Drawing.Size(298, 135);
-            this.txtAnotacoes.TabIndex = 13;
+            this.txtAnotacoes.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -224,7 +224,7 @@
             this.groupBox2.Location = new System.Drawing.Point(416, 73);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(80, 41);
-            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "STATUS";
             // 
@@ -254,7 +254,7 @@
             this.groupBox4.Location = new System.Drawing.Point(6, 323);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(169, 164);
-            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "    Valores";
             // 
@@ -285,7 +285,8 @@
             this.txtCusto.Location = new System.Drawing.Point(8, 36);
             this.txtCusto.Name = "txtCusto";
             this.txtCusto.Size = new System.Drawing.Size(138, 24);
-            this.txtCusto.TabIndex = 10;
+            this.txtCusto.TabIndex = 0;
+            this.txtCusto.Text = "0";
             // 
             // label7
             // 
@@ -304,7 +305,8 @@
             this.txtMargemLucro.Location = new System.Drawing.Point(8, 81);
             this.txtMargemLucro.Name = "txtMargemLucro";
             this.txtMargemLucro.Size = new System.Drawing.Size(138, 24);
-            this.txtMargemLucro.TabIndex = 11;
+            this.txtMargemLucro.TabIndex = 1;
+            this.txtMargemLucro.Text = "0";
             // 
             // txtVenda
             // 
@@ -313,7 +315,8 @@
             this.txtVenda.Location = new System.Drawing.Point(8, 126);
             this.txtVenda.Name = "txtVenda";
             this.txtVenda.Size = new System.Drawing.Size(139, 24);
-            this.txtVenda.TabIndex = 12;
+            this.txtVenda.TabIndex = 2;
+            this.txtVenda.Text = "0";
             // 
             // label22
             // 
@@ -335,7 +338,7 @@
             this.groupBox3.Location = new System.Drawing.Point(11, 220);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(282, 88);
-            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Quantidade em Estoque";
             // 
@@ -346,7 +349,8 @@
             this.txtEstoqueAtual.Location = new System.Drawing.Point(152, 23);
             this.txtEstoqueAtual.Name = "txtEstoqueAtual";
             this.txtEstoqueAtual.Size = new System.Drawing.Size(115, 24);
-            this.txtEstoqueAtual.TabIndex = 7;
+            this.txtEstoqueAtual.TabIndex = 0;
+            this.txtEstoqueAtual.Text = "0";
             // 
             // label5
             // 
@@ -365,7 +369,8 @@
             this.txtEstoqueMinimo.Location = new System.Drawing.Point(152, 53);
             this.txtEstoqueMinimo.Name = "txtEstoqueMinimo";
             this.txtEstoqueMinimo.Size = new System.Drawing.Size(115, 24);
-            this.txtEstoqueMinimo.TabIndex = 8;
+            this.txtEstoqueMinimo.TabIndex = 1;
+            this.txtEstoqueMinimo.Text = "0";
             // 
             // label4
             // 
@@ -405,7 +410,7 @@
             this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(328, 25);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 1;
             // 
             // txtCodigoBarras
             // 
@@ -565,7 +570,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(509, 494);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FICHA";
             // 
@@ -591,7 +596,7 @@
             this.groupBox7.Location = new System.Drawing.Point(299, 220);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(197, 88);
-            this.groupBox7.TabIndex = 14;
+            this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Unidades";
             // 
@@ -640,6 +645,7 @@
             this.dtgListaProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgListaProdutos.Size = new System.Drawing.Size(391, 494);
             this.dtgListaProdutos.TabIndex = 24;
+            this.dtgListaProdutos.TabStop = false;
             this.dtgListaProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListaProdutos_CellContentClick);
             // 
             // ID_PRODUTO
