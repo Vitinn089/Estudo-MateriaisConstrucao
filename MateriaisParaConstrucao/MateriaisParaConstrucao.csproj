@@ -44,8 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clientes.cs" />
-    <Compile Include="Conexao.cs" />
     <Compile Include="frmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,14 +74,18 @@
     <Compile Include="frmProdutos.Designer.cs">
       <DependentUpon>frmProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorio.Designer.cs">
+      <DependentUpon>frmRelatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUnidades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUnidades.Designer.cs">
       <DependentUpon>frmUnidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionarios.cs" />
-    <Compile Include="Produtos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCategorias.resx">
@@ -100,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdutos.resx">
       <DependentUpon>frmProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorio.resx">
+      <DependentUpon>frmRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUnidades.resx">
       <DependentUpon>frmUnidades.cs</DependentUpon>
@@ -159,6 +164,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\unidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relatorio_Produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RegraNegocio\RegraNegocio.csproj">
+      <Project>{f9bd0401-26c3-4bd4-acb6-4a38b9a238c5}</Project>
+      <Name>RegraNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

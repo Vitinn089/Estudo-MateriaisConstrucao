@@ -637,6 +637,7 @@
             this.dtgListaProdutos.Name = "dtgListaProdutos";
             this.dtgListaProdutos.ReadOnly = true;
             this.dtgListaProdutos.RowHeadersVisible = false;
+            this.dtgListaProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgListaProdutos.Size = new System.Drawing.Size(391, 494);
             this.dtgListaProdutos.TabIndex = 24;
             this.dtgListaProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgListaProdutos_CellContentClick);

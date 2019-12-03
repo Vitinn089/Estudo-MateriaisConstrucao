@@ -1,0 +1,16 @@
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Regra\obj\Debug\RegraNegocio.csprojAssemblyReference.cache
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Regra\bin\Debug\Regra.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Regra\bin\Debug\Regra.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Regra\bin\Debug\Acesso.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Regra\bin\Debug\Acesso.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Regra\obj\Debug\RegraNegocio.csproj.CopyComplete
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Regra\obj\Debug\Regra.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Regra\obj\Debug\Regra.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\RegraNegocio\bin\Debug\Regra.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\RegraNegocio\bin\Debug\Regra.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\RegraNegocio\bin\Debug\Acesso.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\RegraNegocio\bin\Debug\Acesso.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\RegraNegocio\obj\Debug\RegraNegocio.csprojAssemblyReference.cache
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\RegraNegocio\obj\Debug\RegraNegocio.csproj.CopyComplete
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\RegraNegocio\obj\Debug\Regra.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\RegraNegocio\obj\Debug\Regra.pdb

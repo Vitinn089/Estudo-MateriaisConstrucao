@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MateriaisParaConstrucao", "MateriaisParaConstrucao\MateriaisParaConstrucao.csproj", "{BA309356-E448-4113-95BB-AA133C5FB718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcessoDados", "AcessoDados\AcessoDados.csproj", "{747540F9-2A06-4619-AF6F-65A136A8A5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegraNegocio", "RegraNegocio\RegraNegocio.csproj", "{F9BD0401-26C3-4BD4-ACB6-4A38B9A238C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +19,19 @@ Global
 		{BA309356-E448-4113-95BB-AA133C5FB718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA309356-E448-4113-95BB-AA133C5FB718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA309356-E448-4113-95BB-AA133C5FB718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{747540F9-2A06-4619-AF6F-65A136A8A5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{747540F9-2A06-4619-AF6F-65A136A8A5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{747540F9-2A06-4619-AF6F-65A136A8A5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{747540F9-2A06-4619-AF6F-65A136A8A5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BD0401-26C3-4BD4-ACB6-4A38B9A238C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BD0401-26C3-4BD4-ACB6-4A38B9A238C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BD0401-26C3-4BD4-ACB6-4A38B9A238C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BD0401-26C3-4BD4-ACB6-4A38B9A238C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9FA35A8-4FE6-4EBE-86BB-2E829A9C8C74}
 	EndGlobalSection
 EndGlobal

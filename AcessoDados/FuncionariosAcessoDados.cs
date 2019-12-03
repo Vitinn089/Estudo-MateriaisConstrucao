@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MateriaisParaConstrucao
+namespace AcessoDados
 {
-    public class Funcionarios
+    public class FuncionariosAcessoDados
     {
         SqlCommand comandoSql = new SqlCommand();
         StringBuilder sql = new StringBuilder();

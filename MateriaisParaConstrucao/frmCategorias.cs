@@ -12,7 +12,7 @@ namespace MateriaisParaConstrucao
 {
     public partial class frmCategorias : Form
     {
-        Produtos novoProduto;
+        RegraNegocio.ProdutosRegraNegocio novoProduto;
 
         public frmCategorias()
         {
@@ -34,7 +34,7 @@ namespace MateriaisParaConstrucao
 
         private void Listar()
         {
-            novoProduto = new Produtos();
+            novoProduto = new RegraNegocio.ProdutosRegraNegocio();
 
             try
             {
@@ -61,7 +61,7 @@ namespace MateriaisParaConstrucao
 
         private void btnSalvar_Click(object sender, EventArgs e) //Salva ou altera uma categoria
         {
-            novoProduto = new Produtos();
+            novoProduto = new RegraNegocio.ProdutosRegraNegocio();
 
             try
             {
@@ -100,7 +100,7 @@ namespace MateriaisParaConstrucao
                     }
                     else if (dtgCategorias.Columns[e.ColumnIndex].Name == "btnExcluir" && MessageBox.Show("Você deseja excluir essa categoria?", "Deseja excluir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        novoProduto = new Produtos();
+                        novoProduto = new RegraNegocio.ProdutosRegraNegocio();
 
                         novoProduto.ExcluirCategoria(Convert.ToInt32(dtgCategorias.Rows[e.RowIndex].Cells["ID_CATEGORIA_PRODUTOS"].Value.ToString()));
 

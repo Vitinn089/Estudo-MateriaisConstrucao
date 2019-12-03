@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MateriaisParaConstrucao
+namespace AcessoDados
 {
-    public class Clientes
+    public class ClientesAcessoDados
     {
         SqlCommand comandoSql = new SqlCommand();
         StringBuilder sql = new StringBuilder();
@@ -180,7 +180,7 @@ namespace MateriaisParaConstrucao
         }
 
         public void Alterar(int idCliente, string nome, string endereco, string bairro, string cep, string cidade, string estado, string telefone1, string telefone2,
-                          string email, DateTime dataCadastro, DateTime nascimento, string observacoes)
+                            string email, DateTime dataCadastro, DateTime nascimento, string observacoes)
         {
             try
             {

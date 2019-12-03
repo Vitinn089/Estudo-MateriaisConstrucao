@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MateriaisParaConstrucao
+namespace AcessoDados
 {
-    public class Produtos
+    public class ProdutosAcessoDados
     {
         SqlCommand comandoSql = new SqlCommand();
         StringBuilder sql = new StringBuilder();
@@ -280,8 +280,8 @@ namespace MateriaisParaConstrucao
         }
 
         public void AlterarProduto(int codigo, string codigoBarras, string nome, string descricao, int idUnidade, int idCategoria, int estoqueMinimo,
-                                  int estoqueAtual, decimal valorCompra, decimal valorVenda, decimal margemLucro, string anotacoes,
-                                  Boolean situacao, DateTime cadastro)
+                                   int estoqueAtual, decimal valorCompra, decimal valorVenda, decimal margemLucro, string anotacoes,
+                                   Boolean situacao, DateTime cadastro)
         {
             try
             {

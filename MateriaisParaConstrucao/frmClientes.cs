@@ -17,112 +17,11 @@ namespace MateriaisParaConstrucao
             InitializeComponent();
         }
 
-        Clientes novoCliente;
+        RegraNegocio.ClientesRegraNegocio novoCliente;
 
-        private void rbPessoaFisica_CheckedChanged(object sender, EventArgs e)
+        private void frmClientes_Load(object sender, EventArgs e)
         {
-            //se verificado que o RadionButton rbPessoaFisica está selecionado
-            if (rbPessoaFisica.Checked == true)
-            {
-                //o GroupBox dos documentos da pessoa física fica visível e da jurídica invisível
-                gbDocumentosPessoaFisica.Visible = true;
-                gbDocumentosPessoaJuridica.Visible = false;
-            }
-        }
-
-        private void rbPessoaJuridica_CheckedChanged(object sender, EventArgs e)
-        {
-            //se verificado que o RadionButton rbPessoaJuridica está selecionado
-            if (rbPessoaJuridica.Checked == true)
-            {
-                //o GroupBox dos documentos da pessoa jurídica fica visível e da física invisível
-                gbDocumentosPessoaJuridica.Visible = true;
-                gbDocumentosPessoaFisica.Visible = false;
-            }
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                novoCliente = new Clientes();
-                
-                //se a caixa de texto que recebe o código do cliente estiver com o valor 0
-                if (txtRegistro.Text == "0")
-                {
-                    //verifica se o RadioButton referente à pessoa física está selecionado
-                    if (rbPessoaFisica.Checked == true)
-                    {
-                        //se sim, realiza a ação de salvar os dados na tabela Cliente
-                        novoCliente.Salvar(txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text,
-                                           txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text,
-                                           dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
-
-                        //depois lista todos os clientes da tabela, tendo como base o id deles
-                        DataTable dadosTabela = new DataTable();
-                        novoCliente = new Clientes();
-                        dadosTabela = novoCliente.Listar();
-
-                        //em seguida, salva os dados referentes ao RG e CPF na tabela Pessoa_fisica
-                        novoCliente = new Clientes();
-                        novoCliente.SalvarPessoaFísica(Convert.ToInt32(dadosTabela.Rows[0]["ID_CLIENTE"]), txtCpf.Text, txtRg.Text);
-                        MessageBox.Show("Cliente cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        /*senão, é o RadioButton referente à pessoa jurídica que está selecionado e realiza a ação salvar os dados
-                         * na tabela Cliente*/
-                        novoCliente.Salvar(txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text,
-                                           txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text,
-                                           dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
-
-                        //depois lista todos os clientes da tabela, tendo como base o id deles
-                        DataTable dadosTabela = new DataTable();
-                        novoCliente = new Clientes();
-                        dadosTabela = novoCliente.Listar();
-                        
-                        //em seguida, salva os dados referentes ao IE e CNPJ na tabela Pessoa_juridica
-                        novoCliente = new Clientes();
-                        novoCliente.SalvarPessoaJuridica(Convert.ToInt32(dadosTabela.Rows[0]["ID_CLIENTE"]), txtCnpj.Text, txtIe.Text);
-                        MessageBox.Show("Cliente cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    //senão, se o código for diferente de 0 e o RadioButton referente à pessoa física estiver selecionado
-                    if (rbPessoaFisica.Checked == true)
-                    {
-                        //realizará o método Alterar e AlterarPessoaFisica, para as tabelas Cliente e Pessoa_fisica receberem as mudanças
-                        novoCliente.Alterar(Convert.ToInt32(txtRegistro.Text), txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, 
-                                            txtCidade.Text, txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text, 
-                                            dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
-                        novoCliente = new Clientes();
-                        novoCliente.AlterarPessoaFisica(Convert.ToInt32(txtRegistro.Text), txtCpf.Text, txtRg.Text);
-                        MessageBox.Show("Cliente alterado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        //senão, significa que o rbPessoaJuridica está selecionado e realiza os métodos Alterar e AlterarPessoaJuridica
-                        novoCliente.Alterar(Convert.ToInt32(txtRegistro.Text), txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text,
-                                            txtCidade.Text, txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text, 
-                                            dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
-                        novoCliente = new Clientes();
-                        novoCliente.AlterarPessoaJuridica(Convert.ToInt32(txtRegistro.Text), txtCnpj.Text, txtIe.Text);
-                        MessageBox.Show("Cliente alterado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                ListarClientes();
-                Limpar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnNovo_Click(object sender, EventArgs e)
-        {
-            Limpar();
+            ListarClientes();
         }
 
         private void Limpar()
@@ -154,6 +53,127 @@ namespace MateriaisParaConstrucao
             }
         }
 
+        private void ListarClientes()
+        {
+            try
+            {
+                novoCliente = new RegraNegocio.ClientesRegraNegocio();
+                dtgClientes.DataSource = novoCliente.Listar();
+
+                Estilo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void rbPessoaFisica_CheckedChanged(object sender, EventArgs e)
+        {
+            //se verificado que o RadionButton rbPessoaFisica está selecionado
+            if (rbPessoaFisica.Checked == true)
+            {
+                //o GroupBox dos documentos da pessoa física fica visível e da jurídica invisível
+                gbDocumentosPessoaFisica.Visible = true;
+                gbDocumentosPessoaJuridica.Visible = false;
+            }
+        }
+
+        private void rbPessoaJuridica_CheckedChanged(object sender, EventArgs e)
+        {
+            //se verificado que o RadionButton rbPessoaJuridica está selecionado
+            if (rbPessoaJuridica.Checked == true)
+            {
+                //o GroupBox dos documentos da pessoa jurídica fica visível e da física invisível
+                gbDocumentosPessoaJuridica.Visible = true;
+                gbDocumentosPessoaFisica.Visible = false;
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                novoCliente = new RegraNegocio.ClientesRegraNegocio();
+                
+                //se a caixa de texto que recebe o código do cliente estiver com o valor 0
+                if (txtRegistro.Text == "0")
+                {
+                    //verifica se o RadioButton referente à pessoa física está selecionado
+                    if (rbPessoaFisica.Checked == true)
+                    {
+                        //se sim, realiza a ação de salvar os dados na tabela Cliente
+                        novoCliente.Salvar(txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text,
+                                           txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text,
+                                           dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
+
+                        //depois lista todos os clientes da tabela, tendo como base o id deles
+                        DataTable dadosTabela = new DataTable();
+                        novoCliente = new RegraNegocio.ClientesRegraNegocio();
+                        dadosTabela = novoCliente.Listar();
+
+                        //em seguida, salva os dados referentes ao RG e CPF na tabela Pessoa_fisica
+                        novoCliente = new RegraNegocio.ClientesRegraNegocio();
+                        novoCliente.SalvarPessoaFisica(Convert.ToInt32(dadosTabela.Rows[0]["ID_CLIENTE"]), txtCpf.Text, txtRg.Text);
+                        MessageBox.Show("Cliente cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        /*senão, é o RadioButton referente à pessoa jurídica que está selecionado e realiza a ação salvar os dados
+                         * na tabela Cliente*/
+                        novoCliente.Salvar(txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text,
+                                           txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text,
+                                           dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
+
+                        //depois lista todos os clientes da tabela, tendo como base o id deles
+                        DataTable dadosTabela = new DataTable();
+                        novoCliente = new RegraNegocio.ClientesRegraNegocio();
+                        dadosTabela = novoCliente.Listar();
+                        
+                        //em seguida, salva os dados referentes ao IE e CNPJ na tabela Pessoa_juridica
+                        novoCliente = new RegraNegocio.ClientesRegraNegocio();
+                        novoCliente.SalvarPessoaJuridica(Convert.ToInt32(dadosTabela.Rows[0]["ID_CLIENTE"]), txtCnpj.Text, txtIe.Text);
+                        MessageBox.Show("Cliente cadastrado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    //senão, se o código for diferente de 0 e o RadioButton referente à pessoa física estiver selecionado
+                    if (rbPessoaFisica.Checked == true)
+                    {
+                        //realizará o método Alterar e AlterarPessoaFisica, para as tabelas Cliente e Pessoa_fisica receberem as mudanças
+                        novoCliente.Alterar(Convert.ToInt32(txtRegistro.Text), txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, 
+                                            txtCidade.Text, txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text, 
+                                            dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
+                        novoCliente = new RegraNegocio.ClientesRegraNegocio();
+                        novoCliente.AlterarPessoaFisica(Convert.ToInt32(txtRegistro.Text), txtCpf.Text, txtRg.Text);
+                        MessageBox.Show("Cliente alterado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        //senão, significa que o rbPessoaJuridica está selecionado e realiza os métodos Alterar e AlterarPessoaJuridica
+                        novoCliente.Alterar(Convert.ToInt32(txtRegistro.Text), txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text,
+                                            txtCidade.Text, txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text, 
+                                            dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
+                        novoCliente = new RegraNegocio.ClientesRegraNegocio();
+                        novoCliente.AlterarPessoaJuridica(Convert.ToInt32(txtRegistro.Text), txtCnpj.Text, txtIe.Text);
+                        MessageBox.Show("Cliente alterado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                ListarClientes();
+                Limpar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
+
         private void dtgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //primeiro verifica se possui informações mostradas no DataGridView
@@ -179,7 +199,7 @@ namespace MateriaisParaConstrucao
 
                     //depois realiza a listagem dos clientes de pessoa física, baseado no ID deles
                     DataTable dadosTabela = new DataTable();
-                    novoCliente = new Clientes();
+                    novoCliente = new RegraNegocio.ClientesRegraNegocio();
                     dadosTabela = novoCliente.ListarPessoaFisica(Convert.ToInt32(dtgClientes.Rows[e.RowIndex].Cells["ID_CLIENTE"].Value));
 
                     // e se a contagem das linhas for maior que 0, significando que o cliente é uma pessoa física
@@ -198,7 +218,7 @@ namespace MateriaisParaConstrucao
                         /*senão, é pessoa jurídica e realiza o processo de listar os clientes desse tipo baseado por seu ID,
                          * onde os componentes referentes ao CNPJ e IE recebem os valores do DataGrid e deixa visível o 
                            GroupBox referente à pessoa jurídica e a física invisível*/
-                        novoCliente = new Clientes();
+                        novoCliente = new RegraNegocio.ClientesRegraNegocio();
                         dadosTabela = novoCliente.ListarPessoaJuridica(Convert.ToInt32(dtgClientes.Rows[e.RowIndex].Cells["ID_CLIENTE"].Value));
 
                         txtCnpj.Text = dadosTabela.Rows[0]["CNPJ_CLIENTE"].ToString();
@@ -218,7 +238,7 @@ namespace MateriaisParaConstrucao
                         try
                         {
                             //se sim, realiza o método Excluir, mostra mensagem do sucesso dessa ação, lista os clientes no DataGrid e limpa todos os campos
-                            novoCliente = new Clientes();
+                            novoCliente = new RegraNegocio.ClientesRegraNegocio();
                             novoCliente.Excluir(Convert.ToInt32(dtgClientes.Rows[e.RowIndex].Cells["ID_CLIENTE"].Value));
                             MessageBox.Show("Cliente excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ListarClientes();
@@ -233,31 +253,11 @@ namespace MateriaisParaConstrucao
             }
         }
 
-        private void ListarClientes()
-        {
-            try
-            {
-                novoCliente = new Clientes();
-                dtgClientes.DataSource = novoCliente.Listar();
-
-                Estilo();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void frmClientes_Load(object sender, EventArgs e)
-        {
-            ListarClientes();
-        }
-
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
             /*realiza a pesquisa das informações do DataGrid de acordo com o RadioButton selecionado,
               chamando os seus respectivos métodos*/
-            novoCliente = new Clientes();
+            novoCliente = new RegraNegocio.ClientesRegraNegocio();
 
             try
             {

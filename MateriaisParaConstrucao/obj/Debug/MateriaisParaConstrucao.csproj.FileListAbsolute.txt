@@ -25,3 +25,9 @@ C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisP
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\MateriaisParaConstrucao.pdb
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmUnidades.resources
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.csprojAssemblyReference.cache
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmRelatorio.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\Regra.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\Acesso.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\Regra.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\Acesso.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.csproj.CopyComplete

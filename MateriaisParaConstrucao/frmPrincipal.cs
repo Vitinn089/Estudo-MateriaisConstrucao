@@ -38,5 +38,11 @@ namespace MateriaisParaConstrucao
             frmProdutos formProdutos = new frmProdutos();
             formProdutos.ShowDialog();
         }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            frmRelatorio formRelatorio = new frmRelatorio();
+            formRelatorio.ShowDialog();
+        }
     }
 }

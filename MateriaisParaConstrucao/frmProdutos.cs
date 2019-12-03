@@ -17,7 +17,7 @@ namespace MateriaisParaConstrucao
             InitializeComponent();
         }
 
-        Produtos novoProduto;
+        RegraNegocio.ProdutosRegraNegocio novoProduto;
 
         private void frmProdutos_Load(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace MateriaisParaConstrucao
         {
             try
             {
-                novoProduto = new Produtos();
+                novoProduto = new RegraNegocio.ProdutosRegraNegocio();
 
                 dtgListaProdutos.DataSource = novoProduto.ListarProdutos();
                 Estilo();
@@ -74,7 +74,7 @@ namespace MateriaisParaConstrucao
         {
             try
             {
-                novoProduto = new Produtos();
+                novoProduto = new RegraNegocio.ProdutosRegraNegocio();
 
                 cboCategoria.DataSource = novoProduto.ListarCategorias();
                 cboCategoria.DisplayMember = "NOME_CATEGORIA_PRODUTOS";
@@ -90,7 +90,7 @@ namespace MateriaisParaConstrucao
         {
             try
             {
-                novoProduto = new Produtos();
+                novoProduto = new RegraNegocio.ProdutosRegraNegocio();
 
                 cboUnidade.DataSource = novoProduto.ListarUnidades();
                 cboUnidade.DisplayMember = "NOME_UNIDADE_PRODUTOS";
@@ -123,7 +123,7 @@ namespace MateriaisParaConstrucao
         {
             try
             {
-                novoProduto = new Produtos();
+                novoProduto = new RegraNegocio.ProdutosRegraNegocio();
 
                 if (txtCodigo.Text == "0")
                 {
@@ -176,7 +176,7 @@ namespace MateriaisParaConstrucao
                     }
                     else if (dtgListaProdutos.Columns[e.ColumnIndex].Name == "btnExcluir" && MessageBox.Show("Deseja exluir esse produto?", "Deseja excluir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        novoProduto = new Produtos();
+                        novoProduto = new RegraNegocio.ProdutosRegraNegocio();
 
                         novoProduto.ExcluirProduto(Convert.ToInt32(dtgListaProdutos.Rows[e.RowIndex].Cells["ID_PRODUTO"].Value.ToString()));
                         MessageBox.Show("Produto Deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

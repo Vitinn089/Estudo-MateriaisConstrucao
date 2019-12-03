@@ -17,39 +17,14 @@ namespace MateriaisParaConstrucao
             InitializeComponent();
         }
 
-        Funcionarios novoFuncionario;
+        RegraNegocio.FuncionariosRegraNegocio novoFuncionario;
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        //método que será executado quando o frmFuncionario for carregado
+        private void frmFuncionarios_Load(object sender, EventArgs e)
         {
-            //evento do botão Salvar o qual grava as informações através do método Salvar ou Alterar, criado na classe Funcionarios
-            try
-            {
-                novoFuncionario = new Funcionarios();
-
-                if (txtRegistro.Text == "0")
-                {
-                    novoFuncionario.Salvar(txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text, txtEmail.Text,
-                       dtpNascimento.Value.Date, txtTelefone1.Text, txtTelefone2.Text, txtRg.Text, txtCpf.Text,
-                       txtObservacao.Text, dtpDataCadastro.Value.Date);
-                     MessageBox.Show("Funcionário salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    novoFuncionario.Alterar(Convert.ToInt32(txtRegistro.Text), txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text,
-                                       txtEmail.Text, dtpNascimento.Value.Date, txtTelefone1.Text, txtTelefone2.Text, txtRg.Text, txtCpf.Text,
-                                       txtObservacao.Text, dtpDataCadastro.Value.Date);
-                    MessageBox.Show("Funcionário alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                
-                ListarFuncionarios();
-                Limpar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            ListarFuncionarios();
         }
-        
+
         //método responsável por limpar os componentes do formulário
         private void Limpar()
         {
@@ -80,15 +55,40 @@ namespace MateriaisParaConstrucao
         //método que lista os dados da tabela Funcionarios no DataGridView
         private void ListarFuncionarios()
         {
-            novoFuncionario = new Funcionarios();
+            novoFuncionario = new RegraNegocio.FuncionariosRegraNegocio();
             dtgFuncionarios.DataSource = novoFuncionario.Listar();
             Estilo();
         }
 
-        //método que será executado quando o frmFuncionario for carregado
-        private void frmFuncionarios_Load(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
-            ListarFuncionarios();
+            //evento do botão Salvar o qual grava as informações através do método Salvar ou Alterar, criado na classe Funcionarios
+            try
+            {
+                novoFuncionario = new RegraNegocio.FuncionariosRegraNegocio();
+
+                if (txtRegistro.Text == "0")
+                {
+                    novoFuncionario.Salvar(txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text, txtEmail.Text,
+                       dtpNascimento.Value.Date, txtTelefone1.Text, txtTelefone2.Text, txtRg.Text, txtCpf.Text,
+                       txtObservacao.Text, dtpDataCadastro.Value.Date);
+                     MessageBox.Show("Funcionário salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    novoFuncionario.Alterar(Convert.ToInt32(txtRegistro.Text), txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text,
+                                       txtEmail.Text, dtpNascimento.Value.Date, txtTelefone1.Text, txtTelefone2.Text, txtRg.Text, txtCpf.Text,
+                                       txtObservacao.Text, dtpDataCadastro.Value.Date);
+                    MessageBox.Show("Funcionário alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
+                ListarFuncionarios();
+                Limpar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //evento que detecta a célula clicada dentro do dtgFuncionarios
@@ -125,7 +125,7 @@ namespace MateriaisParaConstrucao
                         try
                         {
                             //acessa o método Excluir da classe Funcionarios, excluindo os registros, tendo como base a coluna ID_FUNCIONARIO
-                            novoFuncionario = new Funcionarios();
+                            novoFuncionario = new RegraNegocio.FuncionariosRegraNegocio();
                             novoFuncionario.Excluir(Convert.ToInt32(dtgFuncionarios.Rows[e.RowIndex].Cells["ID_FUNCIONARIO"].Value));
                             MessageBox.Show("Funcionario excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ListarFuncionarios();
@@ -144,7 +144,7 @@ namespace MateriaisParaConstrucao
         {
             /* evento do txtPesquisa, o qual verifica se desejamos pesquisar por nome ou CPF
              * e exibe os resultados de acordo com o que for digitado no mesmo. */
-            novoFuncionario = new Funcionarios();
+            novoFuncionario = new RegraNegocio.FuncionariosRegraNegocio();
 
             try
             {

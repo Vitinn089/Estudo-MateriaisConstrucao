@@ -1,0 +1,4 @@
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Acesso\bin\Debug\Acesso.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Acesso\bin\Debug\Acesso.pdb
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Acesso\obj\Debug\Acesso.dll
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\Acesso\obj\Debug\Acesso.pdb
