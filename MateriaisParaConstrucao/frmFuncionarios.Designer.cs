@@ -425,7 +425,7 @@
             this.txtTelefone2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefone2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone2.Location = new System.Drawing.Point(120, 58);
-            this.txtTelefone2.Mask = "(99) 0000-0000";
+            this.txtTelefone2.Mask = "(99) 00000-0000";
             this.txtTelefone2.Name = "txtTelefone2";
             this.txtTelefone2.Size = new System.Drawing.Size(98, 22);
             this.txtTelefone2.TabIndex = 1;
@@ -435,7 +435,7 @@
             this.txtTelefone1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefone1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone1.Location = new System.Drawing.Point(120, 30);
-            this.txtTelefone1.Mask = "(99) 0000-0000";
+            this.txtTelefone1.Mask = "(99) 00000-0000";
             this.txtTelefone1.Name = "txtTelefone1";
             this.txtTelefone1.Size = new System.Drawing.Size(98, 22);
             this.txtTelefone1.TabIndex = 0;

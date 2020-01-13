@@ -6,4 +6,3 @@ C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\AcessoDado
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\AcessoDados\bin\Debug\Acesso.pdb
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\AcessoDados\obj\Debug\Acesso.dll
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\AcessoDados\obj\Debug\Acesso.pdb
-C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\AcessoDados\obj\Debug\AcessoDados.csprojAssemblyReference.cache
