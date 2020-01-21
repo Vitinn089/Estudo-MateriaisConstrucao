@@ -64,9 +64,19 @@ namespace RegraNegocio
             try
             {
                 Validar(nome, rg, cpf, telefone1, endereco, bairro, cep, cidade, email, nascimento);
+                dadosTabela = PesquisarCpf(cpf);
 
-                novoFuncionario.Salvar(nome, endereco, bairro, cep, cidade, email, nascimento, telefone1, telefone2,
-                                       rg, cpf, observacoes, dataCadastro);
+                if (dadosTabela.Rows.Count == 0)
+                {
+                    AcessoDados.FuncionariosAcessoDados novoFuncionario = new AcessoDados.FuncionariosAcessoDados();
+
+                    novoFuncionario.Salvar(nome, endereco, bairro, cep, cidade, email, nascimento, telefone1, telefone2,
+                                                   rg, cpf, observacoes, dataCadastro); 
+                }
+                else
+                {
+                    throw new Exception("Esse CPF já foi cadastrado!");
+                }
             }
             catch (Exception ex)
             {
@@ -89,7 +99,7 @@ namespace RegraNegocio
         public void Alterar(int idFuncionario, string nome, string endereco, string bairro, string cep,
                             string cidade, string email, DateTime nascimento, string telefone1, string telefone2,
                             string rg, string cpf, string observacoes, DateTime dataCadastro)
-        {
+         {
             try
             {
                 Validar(nome, rg, cpf, telefone1, endereco, bairro, cep, cidade, email, nascimento);
@@ -99,6 +109,8 @@ namespace RegraNegocio
                 {
                     if (Convert.ToInt32(dadosTabela.Rows[0]["ID_FUNCIONARIO"]) == idFuncionario)
                     {
+                        AcessoDados.FuncionariosAcessoDados novoFuncionario = new AcessoDados.FuncionariosAcessoDados();
+
                         novoFuncionario.Alterar(idFuncionario, nome, endereco, bairro, cep, cidade, email, nascimento, telefone1,
                                                 telefone2, rg, cpf, observacoes, dataCadastro); 
                     }
@@ -109,6 +121,8 @@ namespace RegraNegocio
                 }
                 else
                 {
+                    AcessoDados.FuncionariosAcessoDados novoFuncionario = new AcessoDados.FuncionariosAcessoDados();
+
                     novoFuncionario.Alterar(idFuncionario, nome, endereco, bairro, cep, cidade, email, nascimento, telefone1,
                                                                         telefone2, rg, cpf, observacoes, dataCadastro);
                 }

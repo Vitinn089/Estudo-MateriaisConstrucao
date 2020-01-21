@@ -99,13 +99,12 @@ namespace AcessoDados
                     conexao.Open();
 
                     sql.Append("UPDATE Funcionario");
-                    sql.Append(" SET NOME_FUNCIONARIO=@nome, ENDERECO_FUNCIONARIO=@endereco, BAIRRO_FUNCIONARIO=@bairro, "); 
-                    sql.Append("CEP_FUNCIONARIO=@cep, CIDADE_FUNCIONARIO=@cidade, EMAIL_FUNCIONARIO=@email, ");
-                    sql.Append("NASCIMENTO_FUNCIONARIO=@nascimento, OBSERVACOES_FUNCIONARIO=@observacoes, ");
-                    sql.Append("TELEFONE1_FUNCIONARIO=@telefone1, TELEFONE2_FUNCIONARIO=@telefone2, RG_FUNCIONARIO=@rg, ");
-                    sql.Append("CPF_FUNCIONARIO=@cpf, DATA_CADASTRO_FUNCIONARIO=@dataCadastro");
-                    
-                    sql.Append(" WHERE (ID_FUNCIONARIO=@idFuncionario)");
+                    sql.Append(" SET NOME_FUNCIONARIO = @nome, ENDERECO_FUNCIONARIO = @endereco, BAIRRO_FUNCIONARIO = @bairro,"); 
+                    sql.Append(" CEP_FUNCIONARIO = @cep, CIDADE_FUNCIONARIO = @cidade, EMAIL_FUNCIONARIO = @email,");
+                    sql.Append(" NASCIMENTO_FUNCIONARIO = @nascimento, OBSERVACOES_FUNCIONARIO = @observacoes,");
+                    sql.Append(" TELEFONE1_FUNCIONARIO = @telefone1, TELEFONE2_FUNCIONARIO = @telefone2, RG_FUNCIONARIO = @rg,");
+                    sql.Append(" CPF_FUNCIONARIO = @cpf, DATA_CADASTRO_FUNCIONARIO = @dataCadastro ");
+                    sql.Append("WHERE ID_FUNCIONARIO = @idFuncionario");
 
                     comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
                     comandoSql.Parameters.Add(new SqlParameter("@endereco", endereco));
@@ -196,7 +195,7 @@ namespace AcessoDados
 
                     sql.Append("SELECT * FROM Funcionario");
                     sql.Append(" WHERE CPF_FUNCIONARIO LIKE '%'+@cpf+'%'");
-                    sql.Append(" ORDER BY ID_FUNCIONARIO DESC");
+                    sql.Append(" ORDER BY ID_FUNCIONARIO DESC ");
 
                     comandoSql.Parameters.Add(new SqlParameter("@cpf", cpf));
 

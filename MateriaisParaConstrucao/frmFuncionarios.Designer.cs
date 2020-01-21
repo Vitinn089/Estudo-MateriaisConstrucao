@@ -34,23 +34,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSalvar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dtgFuncionarios = new System.Windows.Forms.DataGridView();
-            this.ID_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOME_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ENDERECO_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BAIRRO_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CEP_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CIDADE_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EMAIL_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NASCIMENTO_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OBSERVACOES_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TELEFONE1_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TELEFONE2_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RG_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DATA_CADASTRO_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnExcluir = new System.Windows.Forms.DataGridViewImageColumn();
             this.label17 = new System.Windows.Forms.Label();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
@@ -85,11 +68,28 @@
             this.txtObservacao = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtRegistro = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DATA_CADASTRO_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RG_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TELEFONE2_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TELEFONE1_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OBSERVACOES_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NASCIMENTO_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EMAIL_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CIDADE_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CEP_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BAIRRO_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ENDERECO_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_FUNCIONARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtgFuncionarios = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgFuncionarios)).BeginInit();
             this.gbDocumentosPessoaFisica.SuspendLayout();
             this.gbContato.SuspendLayout();
             this.Pesquisa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgFuncionarios)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -140,171 +140,6 @@
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 58);
-            // 
-            // dtgFuncionarios
-            // 
-            this.dtgFuncionarios.AllowUserToAddRows = false;
-            this.dtgFuncionarios.AllowUserToDeleteRows = false;
-            this.dtgFuncionarios.AllowUserToResizeColumns = false;
-            this.dtgFuncionarios.AllowUserToResizeRows = false;
-            this.dtgFuncionarios.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dtgFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgFuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_FUNCIONARIO,
-            this.NOME_FUNCIONARIO,
-            this.ENDERECO_FUNCIONARIO,
-            this.BAIRRO_FUNCIONARIO,
-            this.CEP_FUNCIONARIO,
-            this.CIDADE_FUNCIONARIO,
-            this.EMAIL_FUNCIONARIO,
-            this.NASCIMENTO_FUNCIONARIO,
-            this.OBSERVACOES_FUNCIONARIO,
-            this.TELEFONE1_FUNCIONARIO,
-            this.TELEFONE2_FUNCIONARIO,
-            this.RG_FUNCIONARIO,
-            this.CPF_FUNCIONARIO,
-            this.DATA_CADASTRO_FUNCIONARIO,
-            this.btnEditar,
-            this.btnExcluir});
-            this.dtgFuncionarios.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgFuncionarios.Location = new System.Drawing.Point(12, 386);
-            this.dtgFuncionarios.Name = "dtgFuncionarios";
-            this.dtgFuncionarios.ReadOnly = true;
-            this.dtgFuncionarios.RowHeadersVisible = false;
-            this.dtgFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgFuncionarios.Size = new System.Drawing.Size(815, 235);
-            this.dtgFuncionarios.TabIndex = 175;
-            this.dtgFuncionarios.TabStop = false;
-            this.dtgFuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgFuncionarios_CellContentClick);
-            // 
-            // ID_FUNCIONARIO
-            // 
-            this.ID_FUNCIONARIO.DataPropertyName = "ID_FUNCIONARIO";
-            this.ID_FUNCIONARIO.HeaderText = "Código";
-            this.ID_FUNCIONARIO.Name = "ID_FUNCIONARIO";
-            this.ID_FUNCIONARIO.ReadOnly = true;
-            this.ID_FUNCIONARIO.Visible = false;
-            // 
-            // NOME_FUNCIONARIO
-            // 
-            this.NOME_FUNCIONARIO.DataPropertyName = "NOME_FUNCIONARIO";
-            this.NOME_FUNCIONARIO.HeaderText = "Nome";
-            this.NOME_FUNCIONARIO.Name = "NOME_FUNCIONARIO";
-            this.NOME_FUNCIONARIO.ReadOnly = true;
-            this.NOME_FUNCIONARIO.Width = 230;
-            // 
-            // ENDERECO_FUNCIONARIO
-            // 
-            this.ENDERECO_FUNCIONARIO.DataPropertyName = "ENDERECO_FUNCIONARIO";
-            this.ENDERECO_FUNCIONARIO.HeaderText = "Endereço";
-            this.ENDERECO_FUNCIONARIO.Name = "ENDERECO_FUNCIONARIO";
-            this.ENDERECO_FUNCIONARIO.ReadOnly = true;
-            this.ENDERECO_FUNCIONARIO.Width = 250;
-            // 
-            // BAIRRO_FUNCIONARIO
-            // 
-            this.BAIRRO_FUNCIONARIO.DataPropertyName = "BAIRRO_FUNCIONARIO";
-            this.BAIRRO_FUNCIONARIO.HeaderText = "Bairro";
-            this.BAIRRO_FUNCIONARIO.Name = "BAIRRO_FUNCIONARIO";
-            this.BAIRRO_FUNCIONARIO.ReadOnly = true;
-            this.BAIRRO_FUNCIONARIO.Visible = false;
-            // 
-            // CEP_FUNCIONARIO
-            // 
-            this.CEP_FUNCIONARIO.DataPropertyName = "CEP_FUNCIONARIO";
-            this.CEP_FUNCIONARIO.HeaderText = "Cep";
-            this.CEP_FUNCIONARIO.Name = "CEP_FUNCIONARIO";
-            this.CEP_FUNCIONARIO.ReadOnly = true;
-            this.CEP_FUNCIONARIO.Visible = false;
-            // 
-            // CIDADE_FUNCIONARIO
-            // 
-            this.CIDADE_FUNCIONARIO.DataPropertyName = "CIDADE_FUNCIONARIO";
-            this.CIDADE_FUNCIONARIO.HeaderText = "Cidade";
-            this.CIDADE_FUNCIONARIO.Name = "CIDADE_FUNCIONARIO";
-            this.CIDADE_FUNCIONARIO.ReadOnly = true;
-            this.CIDADE_FUNCIONARIO.Visible = false;
-            this.CIDADE_FUNCIONARIO.Width = 200;
-            // 
-            // EMAIL_FUNCIONARIO
-            // 
-            this.EMAIL_FUNCIONARIO.DataPropertyName = "EMAIL_FUNCIONARIO";
-            this.EMAIL_FUNCIONARIO.HeaderText = "Email";
-            this.EMAIL_FUNCIONARIO.Name = "EMAIL_FUNCIONARIO";
-            this.EMAIL_FUNCIONARIO.ReadOnly = true;
-            this.EMAIL_FUNCIONARIO.Width = 170;
-            // 
-            // NASCIMENTO_FUNCIONARIO
-            // 
-            this.NASCIMENTO_FUNCIONARIO.DataPropertyName = "NASCIMENTO_FUNCIONARIO";
-            this.NASCIMENTO_FUNCIONARIO.HeaderText = "Nascimento";
-            this.NASCIMENTO_FUNCIONARIO.Name = "NASCIMENTO_FUNCIONARIO";
-            this.NASCIMENTO_FUNCIONARIO.ReadOnly = true;
-            this.NASCIMENTO_FUNCIONARIO.Visible = false;
-            // 
-            // OBSERVACOES_FUNCIONARIO
-            // 
-            this.OBSERVACOES_FUNCIONARIO.DataPropertyName = "OBSERVACOES_FUNCIONARIO";
-            this.OBSERVACOES_FUNCIONARIO.HeaderText = "Observações";
-            this.OBSERVACOES_FUNCIONARIO.Name = "OBSERVACOES_FUNCIONARIO";
-            this.OBSERVACOES_FUNCIONARIO.ReadOnly = true;
-            this.OBSERVACOES_FUNCIONARIO.Visible = false;
-            // 
-            // TELEFONE1_FUNCIONARIO
-            // 
-            this.TELEFONE1_FUNCIONARIO.DataPropertyName = "TELEFONE1_FUNCIONARIO";
-            this.TELEFONE1_FUNCIONARIO.HeaderText = "Telefone";
-            this.TELEFONE1_FUNCIONARIO.Name = "TELEFONE1_FUNCIONARIO";
-            this.TELEFONE1_FUNCIONARIO.ReadOnly = true;
-            this.TELEFONE1_FUNCIONARIO.Width = 95;
-            // 
-            // TELEFONE2_FUNCIONARIO
-            // 
-            this.TELEFONE2_FUNCIONARIO.DataPropertyName = "TELEFONE2_FUNCIONARIO";
-            this.TELEFONE2_FUNCIONARIO.HeaderText = "Telefone2";
-            this.TELEFONE2_FUNCIONARIO.Name = "TELEFONE2_FUNCIONARIO";
-            this.TELEFONE2_FUNCIONARIO.ReadOnly = true;
-            this.TELEFONE2_FUNCIONARIO.Visible = false;
-            // 
-            // RG_FUNCIONARIO
-            // 
-            this.RG_FUNCIONARIO.DataPropertyName = "RG_FUNCIONARIO";
-            this.RG_FUNCIONARIO.HeaderText = "RG";
-            this.RG_FUNCIONARIO.Name = "RG_FUNCIONARIO";
-            this.RG_FUNCIONARIO.ReadOnly = true;
-            this.RG_FUNCIONARIO.Visible = false;
-            // 
-            // CPF_FUNCIONARIO
-            // 
-            this.CPF_FUNCIONARIO.DataPropertyName = "CPF_FUNCIONARIO";
-            this.CPF_FUNCIONARIO.HeaderText = "CPF";
-            this.CPF_FUNCIONARIO.Name = "CPF_FUNCIONARIO";
-            this.CPF_FUNCIONARIO.ReadOnly = true;
-            this.CPF_FUNCIONARIO.Visible = false;
-            // 
-            // DATA_CADASTRO_FUNCIONARIO
-            // 
-            this.DATA_CADASTRO_FUNCIONARIO.DataPropertyName = "DATA_CADASTRO_FUNCIONARIO";
-            this.DATA_CADASTRO_FUNCIONARIO.HeaderText = "Data";
-            this.DATA_CADASTRO_FUNCIONARIO.Name = "DATA_CADASTRO_FUNCIONARIO";
-            this.DATA_CADASTRO_FUNCIONARIO.ReadOnly = true;
-            this.DATA_CADASTRO_FUNCIONARIO.Visible = false;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "";
-            this.btnEditar.Image = global::MateriaisParaConstrucao.Properties.Resources.editar;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.ReadOnly = true;
-            this.btnEditar.Width = 30;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.HeaderText = "";
-            this.btnExcluir.Image = global::MateriaisParaConstrucao.Properties.Resources.excluir;
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.ReadOnly = true;
-            this.btnExcluir.Width = 30;
             // 
             // label17
             // 
@@ -377,7 +212,6 @@
             // txtRg
             // 
             this.txtRg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRg.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRg.Location = new System.Drawing.Point(70, 25);
             this.txtRg.MaxLength = 50;
@@ -546,7 +380,6 @@
             // txtPesquisa
             // 
             this.txtPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPesquisa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesquisa.Location = new System.Drawing.Point(6, 29);
             this.txtPesquisa.MaxLength = 50;
@@ -624,7 +457,6 @@
             // txtCidade
             // 
             this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(124, 206);
             this.txtCidade.MaxLength = 50;
@@ -635,7 +467,6 @@
             // txtBairro
             // 
             this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBairro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.Location = new System.Drawing.Point(124, 178);
             this.txtBairro.MaxLength = 30;
@@ -646,7 +477,6 @@
             // txtEndereco
             // 
             this.txtEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(124, 150);
             this.txtEndereco.MaxLength = 50;
@@ -657,7 +487,6 @@
             // txtObservacao
             // 
             this.txtObservacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtObservacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtObservacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservacao.Location = new System.Drawing.Point(124, 293);
             this.txtObservacao.MaxLength = 50;
@@ -669,7 +498,6 @@
             // txtNome
             // 
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(124, 120);
             this.txtNome.MaxLength = 50;
@@ -688,6 +516,171 @@
             this.txtRegistro.TabIndex = 170;
             this.txtRegistro.TabStop = false;
             this.txtRegistro.Text = "0";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.HeaderText = "";
+            this.btnExcluir.Image = global::MateriaisParaConstrucao.Properties.Resources.excluir;
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.ReadOnly = true;
+            this.btnExcluir.Width = 30;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "";
+            this.btnEditar.Image = global::MateriaisParaConstrucao.Properties.Resources.editar;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ReadOnly = true;
+            this.btnEditar.Width = 30;
+            // 
+            // DATA_CADASTRO_FUNCIONARIO
+            // 
+            this.DATA_CADASTRO_FUNCIONARIO.DataPropertyName = "DATA_CADASTRO_FUNCIONARIO";
+            this.DATA_CADASTRO_FUNCIONARIO.HeaderText = "Data";
+            this.DATA_CADASTRO_FUNCIONARIO.Name = "DATA_CADASTRO_FUNCIONARIO";
+            this.DATA_CADASTRO_FUNCIONARIO.ReadOnly = true;
+            this.DATA_CADASTRO_FUNCIONARIO.Visible = false;
+            // 
+            // CPF_FUNCIONARIO
+            // 
+            this.CPF_FUNCIONARIO.DataPropertyName = "CPF_FUNCIONARIO";
+            this.CPF_FUNCIONARIO.HeaderText = "CPF";
+            this.CPF_FUNCIONARIO.Name = "CPF_FUNCIONARIO";
+            this.CPF_FUNCIONARIO.ReadOnly = true;
+            this.CPF_FUNCIONARIO.Visible = false;
+            // 
+            // RG_FUNCIONARIO
+            // 
+            this.RG_FUNCIONARIO.DataPropertyName = "RG_FUNCIONARIO";
+            this.RG_FUNCIONARIO.HeaderText = "RG";
+            this.RG_FUNCIONARIO.Name = "RG_FUNCIONARIO";
+            this.RG_FUNCIONARIO.ReadOnly = true;
+            this.RG_FUNCIONARIO.Visible = false;
+            // 
+            // TELEFONE2_FUNCIONARIO
+            // 
+            this.TELEFONE2_FUNCIONARIO.DataPropertyName = "TELEFONE2_FUNCIONARIO";
+            this.TELEFONE2_FUNCIONARIO.HeaderText = "Telefone2";
+            this.TELEFONE2_FUNCIONARIO.Name = "TELEFONE2_FUNCIONARIO";
+            this.TELEFONE2_FUNCIONARIO.ReadOnly = true;
+            this.TELEFONE2_FUNCIONARIO.Visible = false;
+            // 
+            // TELEFONE1_FUNCIONARIO
+            // 
+            this.TELEFONE1_FUNCIONARIO.DataPropertyName = "TELEFONE1_FUNCIONARIO";
+            this.TELEFONE1_FUNCIONARIO.HeaderText = "Telefone";
+            this.TELEFONE1_FUNCIONARIO.Name = "TELEFONE1_FUNCIONARIO";
+            this.TELEFONE1_FUNCIONARIO.ReadOnly = true;
+            this.TELEFONE1_FUNCIONARIO.Width = 95;
+            // 
+            // OBSERVACOES_FUNCIONARIO
+            // 
+            this.OBSERVACOES_FUNCIONARIO.DataPropertyName = "OBSERVACOES_FUNCIONARIO";
+            this.OBSERVACOES_FUNCIONARIO.HeaderText = "Observações";
+            this.OBSERVACOES_FUNCIONARIO.Name = "OBSERVACOES_FUNCIONARIO";
+            this.OBSERVACOES_FUNCIONARIO.ReadOnly = true;
+            this.OBSERVACOES_FUNCIONARIO.Visible = false;
+            // 
+            // NASCIMENTO_FUNCIONARIO
+            // 
+            this.NASCIMENTO_FUNCIONARIO.DataPropertyName = "NASCIMENTO_FUNCIONARIO";
+            this.NASCIMENTO_FUNCIONARIO.HeaderText = "Nascimento";
+            this.NASCIMENTO_FUNCIONARIO.Name = "NASCIMENTO_FUNCIONARIO";
+            this.NASCIMENTO_FUNCIONARIO.ReadOnly = true;
+            this.NASCIMENTO_FUNCIONARIO.Visible = false;
+            // 
+            // EMAIL_FUNCIONARIO
+            // 
+            this.EMAIL_FUNCIONARIO.DataPropertyName = "EMAIL_FUNCIONARIO";
+            this.EMAIL_FUNCIONARIO.HeaderText = "Email";
+            this.EMAIL_FUNCIONARIO.Name = "EMAIL_FUNCIONARIO";
+            this.EMAIL_FUNCIONARIO.ReadOnly = true;
+            this.EMAIL_FUNCIONARIO.Width = 170;
+            // 
+            // CIDADE_FUNCIONARIO
+            // 
+            this.CIDADE_FUNCIONARIO.DataPropertyName = "CIDADE_FUNCIONARIO";
+            this.CIDADE_FUNCIONARIO.HeaderText = "Cidade";
+            this.CIDADE_FUNCIONARIO.Name = "CIDADE_FUNCIONARIO";
+            this.CIDADE_FUNCIONARIO.ReadOnly = true;
+            this.CIDADE_FUNCIONARIO.Visible = false;
+            this.CIDADE_FUNCIONARIO.Width = 200;
+            // 
+            // CEP_FUNCIONARIO
+            // 
+            this.CEP_FUNCIONARIO.DataPropertyName = "CEP_FUNCIONARIO";
+            this.CEP_FUNCIONARIO.HeaderText = "Cep";
+            this.CEP_FUNCIONARIO.Name = "CEP_FUNCIONARIO";
+            this.CEP_FUNCIONARIO.ReadOnly = true;
+            this.CEP_FUNCIONARIO.Visible = false;
+            // 
+            // BAIRRO_FUNCIONARIO
+            // 
+            this.BAIRRO_FUNCIONARIO.DataPropertyName = "BAIRRO_FUNCIONARIO";
+            this.BAIRRO_FUNCIONARIO.HeaderText = "Bairro";
+            this.BAIRRO_FUNCIONARIO.Name = "BAIRRO_FUNCIONARIO";
+            this.BAIRRO_FUNCIONARIO.ReadOnly = true;
+            this.BAIRRO_FUNCIONARIO.Visible = false;
+            // 
+            // ENDERECO_FUNCIONARIO
+            // 
+            this.ENDERECO_FUNCIONARIO.DataPropertyName = "ENDERECO_FUNCIONARIO";
+            this.ENDERECO_FUNCIONARIO.HeaderText = "Endereço";
+            this.ENDERECO_FUNCIONARIO.Name = "ENDERECO_FUNCIONARIO";
+            this.ENDERECO_FUNCIONARIO.ReadOnly = true;
+            this.ENDERECO_FUNCIONARIO.Width = 250;
+            // 
+            // NOME_FUNCIONARIO
+            // 
+            this.NOME_FUNCIONARIO.DataPropertyName = "NOME_FUNCIONARIO";
+            this.NOME_FUNCIONARIO.HeaderText = "Nome";
+            this.NOME_FUNCIONARIO.Name = "NOME_FUNCIONARIO";
+            this.NOME_FUNCIONARIO.ReadOnly = true;
+            this.NOME_FUNCIONARIO.Width = 230;
+            // 
+            // ID_FUNCIONARIO
+            // 
+            this.ID_FUNCIONARIO.DataPropertyName = "ID_FUNCIONARIO";
+            this.ID_FUNCIONARIO.HeaderText = "Código";
+            this.ID_FUNCIONARIO.Name = "ID_FUNCIONARIO";
+            this.ID_FUNCIONARIO.ReadOnly = true;
+            this.ID_FUNCIONARIO.Visible = false;
+            // 
+            // dtgFuncionarios
+            // 
+            this.dtgFuncionarios.AllowUserToAddRows = false;
+            this.dtgFuncionarios.AllowUserToDeleteRows = false;
+            this.dtgFuncionarios.AllowUserToResizeColumns = false;
+            this.dtgFuncionarios.AllowUserToResizeRows = false;
+            this.dtgFuncionarios.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dtgFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgFuncionarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_FUNCIONARIO,
+            this.NOME_FUNCIONARIO,
+            this.ENDERECO_FUNCIONARIO,
+            this.BAIRRO_FUNCIONARIO,
+            this.CEP_FUNCIONARIO,
+            this.CIDADE_FUNCIONARIO,
+            this.EMAIL_FUNCIONARIO,
+            this.NASCIMENTO_FUNCIONARIO,
+            this.OBSERVACOES_FUNCIONARIO,
+            this.TELEFONE1_FUNCIONARIO,
+            this.TELEFONE2_FUNCIONARIO,
+            this.RG_FUNCIONARIO,
+            this.CPF_FUNCIONARIO,
+            this.DATA_CADASTRO_FUNCIONARIO,
+            this.btnEditar,
+            this.btnExcluir});
+            this.dtgFuncionarios.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dtgFuncionarios.Location = new System.Drawing.Point(12, 386);
+            this.dtgFuncionarios.Name = "dtgFuncionarios";
+            this.dtgFuncionarios.ReadOnly = true;
+            this.dtgFuncionarios.RowHeadersVisible = false;
+            this.dtgFuncionarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgFuncionarios.Size = new System.Drawing.Size(815, 235);
+            this.dtgFuncionarios.TabIndex = 175;
+            this.dtgFuncionarios.TabStop = false;
+            this.dtgFuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgFuncionarios_CellContentClick);
             // 
             // frmFuncionarios
             // 
@@ -726,13 +719,13 @@
             this.Load += new System.EventHandler(this.frmFuncionarios_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgFuncionarios)).EndInit();
             this.gbDocumentosPessoaFisica.ResumeLayout(false);
             this.gbDocumentosPessoaFisica.PerformLayout();
             this.gbContato.ResumeLayout(false);
             this.gbContato.PerformLayout();
             this.Pesquisa.ResumeLayout(false);
             this.Pesquisa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgFuncionarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -745,7 +738,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnSalvar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.DataGridView dtgFuncionarios;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Label label13;
@@ -780,21 +772,22 @@
         private System.Windows.Forms.TextBox txtObservacao;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOME_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ENDERECO_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BAIRRO_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CEP_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CIDADE_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NASCIMENTO_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OBSERVACOES_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE1_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE2_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RG_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPF_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_CADASTRO_FUNCIONARIO;
-        private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnExcluir;
+        private System.Windows.Forms.DataGridViewImageColumn btnEditar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_CADASTRO_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RG_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE2_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE1_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OBSERVACOES_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NASCIMENTO_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMAIL_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CIDADE_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CEP_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BAIRRO_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ENDERECO_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOME_FUNCIONARIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_FUNCIONARIO;
+        private System.Windows.Forms.DataGridView dtgFuncionarios;
     }
 }

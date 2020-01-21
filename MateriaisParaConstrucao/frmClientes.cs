@@ -105,7 +105,8 @@ namespace MateriaisParaConstrucao
                         //se sim, realiza a ação de salvar os dados na tabela Cliente
                         novoCliente.Salvar(txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text,
                                            txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text,
-                                           dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
+                                           dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text, 
+                                           txtCpf.Text, txtCnpj.Text, rbPessoaFisica.Checked);
 
                         //depois lista todos os clientes da tabela, tendo como base o id deles
                         DataTable dadosTabela = new DataTable();
@@ -123,7 +124,8 @@ namespace MateriaisParaConstrucao
                          * na tabela Cliente*/
                         novoCliente.Salvar(txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, txtCidade.Text,
                                            txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text,
-                                           dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
+                                           dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text,
+                                           txtCpf.Text, txtCnpj.Text, rbPessoaFisica.Checked);
 
                         //depois lista todos os clientes da tabela, tendo como base o id deles
                         DataTable dadosTabela = new DataTable();
@@ -144,7 +146,8 @@ namespace MateriaisParaConstrucao
                         //realizará o método Alterar e AlterarPessoaFisica, para as tabelas Cliente e Pessoa_fisica receberem as mudanças
                         novoCliente.Alterar(Convert.ToInt32(txtRegistro.Text), txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text, 
                                             txtCidade.Text, txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text, 
-                                            dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
+                                            dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text, txtCpf.Text, txtCnpj.Text, 
+                                            rbPessoaFisica.Checked);
                         novoCliente = new RegraNegocio.ClientesRegraNegocio();
                         novoCliente.AlterarPessoaFisica(Convert.ToInt32(txtRegistro.Text), txtCpf.Text, txtRg.Text);
                         MessageBox.Show("Cliente alterado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -153,8 +156,9 @@ namespace MateriaisParaConstrucao
                     {
                         //senão, significa que o rbPessoaJuridica está selecionado e realiza os métodos Alterar e AlterarPessoaJuridica
                         novoCliente.Alterar(Convert.ToInt32(txtRegistro.Text), txtNome.Text, txtEndereco.Text, txtBairro.Text, txtCep.Text,
-                                            txtCidade.Text, txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text, 
-                                            dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text);
+                                            txtCidade.Text, txtEstado.Text, txtTelefone1.Text, txtTelefone2.Text, txtEmail.Text,
+                                            dtpDataCadastro.Value.Date, dtpNascimento.Value.Date, txtObservacao.Text, txtCpf.Text, txtCnpj.Text,
+                                            rbPessoaFisica.Checked);
                         novoCliente = new RegraNegocio.ClientesRegraNegocio();
                         novoCliente.AlterarPessoaJuridica(Convert.ToInt32(txtRegistro.Text), txtCnpj.Text, txtIe.Text);
                         MessageBox.Show("Cliente alterado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -206,6 +210,7 @@ namespace MateriaisParaConstrucao
                     if (dadosTabela.Rows.Count > 0)
                     {
                         //os componentes referentes ao CPF e RG recebem estes valores do DataGrid
+                        rbPessoaFisica.Checked = true;
                         txtCpf.Text = dadosTabela.Rows[0]["CPF_CLIENTE"].ToString();
                         txtRg.Text = dadosTabela.Rows[0]["RG_CLIENTE"].ToString();
 
@@ -221,6 +226,7 @@ namespace MateriaisParaConstrucao
                         novoCliente = new RegraNegocio.ClientesRegraNegocio();
                         dadosTabela = novoCliente.ListarPessoaJuridica(Convert.ToInt32(dtgClientes.Rows[e.RowIndex].Cells["ID_CLIENTE"].Value));
 
+                        rbPessoaJuridica.Checked = true;
                         txtCnpj.Text = dadosTabela.Rows[0]["CNPJ_CLIENTE"].ToString();
                         txtIe.Text = dadosTabela.Rows[0]["IE_CLIENTE"].ToString();
 

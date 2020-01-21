@@ -255,7 +255,7 @@ namespace AcessoDados
                     conexao.Open();
 
                     sql.Append("UPDATE Pessoa_juridica");
-                    sql.Append(" SET ID_CLIENTE=@idCliente, CNPJ_CLIENTE=@cnpj, IE_CLIENTE=@ie)");
+                    sql.Append(" SET ID_CLIENTE=@idCliente, CNPJ_CLIENTE=@cnpj, IE_CLIENTE=@ie");
                     sql.Append(" WHERE (ID_CLIENTE=@idCliente)");
 
                     comandoSql.Parameters.Add(new SqlParameter("@idCliente", idCliente));
