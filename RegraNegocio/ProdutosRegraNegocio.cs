@@ -124,7 +124,7 @@ namespace RegraNegocio
         }
 
         public void Validar(string codigoBarras, string nome, string descricao, int idUnidade, int idCategoria, int estoqueMinimo,
-                            int estoqueAtual, decimal valorCompra, decimal valorVenda, decimal margemLucro)
+                            int estoqueAtual, string valorCompra, string valorVenda, string margemLucro)
         {
             if (codigoBarras.Trim().Length == 0)
             {
@@ -154,22 +154,55 @@ namespace RegraNegocio
             {
                 throw new Exception("O produto deve possuir uma Unidade!");
             }
-            if (valorCompra == 0)
+
+            try
+            {
+                decimal valor = Convert.ToDecimal(valorCompra);
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("O campo 'Custo' deve possuir somente números!");
+            }
+
+            if (Convert.ToDecimal(valorCompra) == 0)
             {
                 throw new Exception("O campo Custo não pode estar vazio!");
             }
-            if (margemLucro == 0)
+
+            try
             {
-                throw new Exception("O campo Margem de Lucro não pode estar vazio!");
+                decimal valor = Convert.ToDecimal(margemLucro);
             }
-            if (valorVenda == 0)
+            catch (Exception)
+            {
+
+                throw new Exception("O campo 'Margem de Lucro' deve possuir somente números!");
+            }
+
+            if (Convert.ToDecimal(margemLucro) == 0)
+            {
+                throw new Exception("O campo 'Margem de Lucro' não pode estar vazio!");
+            }
+
+            try
+            {
+                decimal venda = Convert.ToDecimal(valorVenda);
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("O campo 'Venda' deve possuir somente números!");
+            }
+
+            if (Convert.ToDecimal(valorVenda) == 0)
             {
                 throw new Exception("O campo Venda não pode estar vazio!");
             }
         }
 
         public void SalvarProduto(string codigoBarras, string nome, string descricao, int idUnidade, int idCategoria, int estoqueMinimo,
-                                  int estoqueAtual, decimal valorCompra, decimal valorVenda, decimal margemLucro, string anotacoes,
+                                  int estoqueAtual, string valorCompra, string valorVenda, string margemLucro, string anotacoes,
                                   Boolean situacao, DateTime cadastro)
         {
             try
@@ -185,8 +218,8 @@ namespace RegraNegocio
                 {
                     AcessoDados.ProdutosAcessoDados novoProduto = new AcessoDados.ProdutosAcessoDados();
 
-                    novoProduto.SalvarProduto(codigoBarras, nome, descricao, idUnidade, idCategoria, estoqueMinimo, estoqueAtual, valorCompra,
-                                              valorVenda, margemLucro, anotacoes, situacao, cadastro); 
+                    novoProduto.SalvarProduto(codigoBarras, nome, descricao, idUnidade, idCategoria, estoqueMinimo, estoqueAtual, Convert.ToDecimal(valorCompra),
+                                              Convert.ToDecimal(valorVenda), Convert.ToDecimal(margemLucro), anotacoes, situacao, cadastro); 
                 }
             }
             catch (Exception ex)
@@ -196,7 +229,7 @@ namespace RegraNegocio
         }
 
         public void AlterarProduto(int codigo, string codigoBarras, string nome, string descricao, int idUnidade, int idCategoria,
-                                   int estoqueMinimo, int estoqueAtual, decimal valorCompra, decimal valorVenda, decimal margemLucro,
+                                   int estoqueMinimo, int estoqueAtual, string valorCompra, string valorVenda, string margemLucro,
                                    string anotacoes, Boolean situacao, DateTime cadastro)
         {
             try
@@ -211,7 +244,7 @@ namespace RegraNegocio
                         AcessoDados.ProdutosAcessoDados novoProduto = new AcessoDados.ProdutosAcessoDados();
 
                         novoProduto.AlterarProduto(codigo, codigoBarras, nome, descricao, idUnidade, idCategoria, estoqueMinimo, estoqueAtual,
-                                              valorCompra, valorVenda, margemLucro, anotacoes, situacao, cadastro);
+                                              Convert.ToDecimal(valorCompra), Convert.ToDecimal(valorVenda), Convert.ToDecimal(margemLucro), anotacoes, situacao, cadastro);
                     }
                     else
                     {
@@ -223,7 +256,7 @@ namespace RegraNegocio
                     AcessoDados.ProdutosAcessoDados novoProduto = new AcessoDados.ProdutosAcessoDados();
 
                     novoProduto.AlterarProduto(codigo, codigoBarras, nome, descricao, idUnidade, idCategoria, estoqueMinimo, estoqueAtual,
-                                          valorCompra, valorVenda, margemLucro, anotacoes, situacao, cadastro);
+                                          Convert.ToDecimal(valorCompra), Convert.ToDecimal(valorVenda), Convert.ToDecimal(margemLucro), anotacoes, situacao, cadastro);
                 }
             }
             catch (Exception ex)

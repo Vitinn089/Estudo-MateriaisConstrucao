@@ -129,16 +129,14 @@ namespace MateriaisParaConstrucao
                 {
                     novoProduto.SalvarProduto(txtCodigoBarras.Text, txtNome.Text, txtDescricao.Text, Convert.ToInt32(cboUnidade.SelectedValue),
                                               Convert.ToInt32(cboCategoria.SelectedValue), Convert.ToInt32(txtEstoqueMinimo.Text), Convert.ToInt32(txtEstoqueAtual.Text),
-                                              Convert.ToDecimal(txtCusto.Text), Convert.ToDecimal(txtVenda.Text), Convert.ToDecimal(txtMargemLucro.Text),
-                                              txtAnotacoes.Text, cbAtivo.Checked, dtpCadastro.Value.Date);
+                                              txtCusto.Text, txtVenda.Text, txtMargemLucro.Text, txtAnotacoes.Text, cbAtivo.Checked, dtpCadastro.Value.Date);
                     MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     novoProduto.AlterarProduto(Convert.ToInt32(txtCodigo.Text), txtCodigoBarras.Text, txtNome.Text, txtDescricao.Text, Convert.ToInt32(cboUnidade.SelectedValue),
                                                Convert.ToInt32(cboCategoria.SelectedValue), Convert.ToInt32(txtEstoqueMinimo.Text), Convert.ToInt32(txtEstoqueAtual.Text),
-                                               Convert.ToDecimal(txtCusto.Text), Convert.ToDecimal(txtVenda.Text), Convert.ToDecimal(txtMargemLucro.Text),
-                                               txtAnotacoes.Text, cbAtivo.Checked, dtpCadastro.Value.Date);
+                                               txtCusto.Text, txtVenda.Text, txtMargemLucro.Text,txtAnotacoes.Text, cbAtivo.Checked, dtpCadastro.Value.Date);
                         MessageBox.Show("Produto alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 

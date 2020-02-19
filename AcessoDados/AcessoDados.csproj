@@ -44,8 +44,10 @@
     <Compile Include="ClientesAcessoDados.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="FuncionariosAcessoDados.cs" />
+    <Compile Include="NivelAcessoDados.cs" />
     <Compile Include="ProdutosAcessoDados.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioAcessoDados.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

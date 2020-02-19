@@ -173,6 +173,16 @@ namespace MateriaisParaConstrucao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap usuários {
+            get {
+                object obj = ResourceManager.GetObject("usuários", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vendas {
             get {
                 object obj = ResourceManager.GetObject("vendas", resourceCulture);
