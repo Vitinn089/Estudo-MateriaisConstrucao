@@ -16,7 +16,17 @@ namespace MateriaisParaConstrucao
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPrincipal());
+
+            frmLogin formLogin = new frmLogin();
+            formLogin.ShowDialog();
+            if (formLogin.DialogResult == DialogResult.OK)
+            {
+                Application.Run(new frmPrincipal(formLogin.idUsuario));
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }

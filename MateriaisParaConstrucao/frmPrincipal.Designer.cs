@@ -28,25 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnClientes = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.btnProdutos = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.btnFuncionarios = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnUsuarios = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnOrcamentos = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnVendas = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnRelatorio = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lbl1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.lbl2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblData = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblNivel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.relogio = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -73,66 +79,6 @@
             this.toolStrip1.TabIndex = 6;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 70);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 70);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 70);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 70);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 70);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 668);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1008, 22);
-            this.statusStrip1.TabIndex = 7;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 70);
-            // 
             // btnClientes
             // 
             this.btnClientes.AutoSize = false;
@@ -144,6 +90,11 @@
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 70);
             // 
             // btnProdutos
             // 
@@ -157,6 +108,11 @@
             this.btnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 70);
+            // 
             // btnFuncionarios
             // 
             this.btnFuncionarios.AutoSize = false;
@@ -169,6 +125,11 @@
             this.btnFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 70);
+            // 
             // btnUsuarios
             // 
             this.btnUsuarios.Image = global::MateriaisParaConstrucao.Properties.Resources.usuários;
@@ -178,6 +139,12 @@
             this.btnUsuarios.Size = new System.Drawing.Size(56, 67);
             this.btnUsuarios.Text = "Usuários";
             this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 70);
             // 
             // btnOrcamentos
             // 
@@ -190,6 +157,11 @@
             this.btnOrcamentos.Text = "Orçamentos";
             this.btnOrcamentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 70);
+            // 
             // btnVendas
             // 
             this.btnVendas.AutoSize = false;
@@ -200,6 +172,11 @@
             this.btnVendas.Size = new System.Drawing.Size(79, 67);
             this.btnVendas.Text = "Vendas";
             this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 70);
             // 
             // btnRelatorio
             // 
@@ -212,6 +189,68 @@
             this.btnRelatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbl1,
+            this.lblUsuario,
+            this.toolStripSeparator8,
+            this.lbl2,
+            this.lblNivel,
+            this.toolStripSeparator7,
+            this.lblData});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 667);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1008, 23);
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lbl1
+            // 
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(50, 18);
+            this.lbl1.Text = "Usuário:";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 23);
+            // 
+            // lbl2
+            // 
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(37, 18);
+            this.lbl2.Text = "Nível:";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 23);
+            // 
+            // lblData
+            // 
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(34, 18);
+            this.lblData.Text = "Data:";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(78, 18);
+            this.lblUsuario.Text = "Carregando...";
+            // 
+            // lblNivel
+            // 
+            this.lblNivel.Name = "lblNivel";
+            this.lblNivel.Size = new System.Drawing.Size(78, 18);
+            this.lblNivel.Text = "Carregando...";
+            // 
+            // relogio
+            // 
+            this.relogio.Enabled = true;
+            this.relogio.Interval = 1000;
+            this.relogio.Tick += new System.EventHandler(this.relogio_Tick);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +262,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema para Lojas de Materiais para Construção";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -249,9 +289,14 @@
         private System.Windows.Forms.ToolStripButton btnUsuarios;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripStatusLabel lbl1;
+        private System.Windows.Forms.ToolStripStatusLabel lbl2;
+        private System.Windows.Forms.ToolStripStatusLabel lblData;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripStatusLabel lblUsuario;
+        private System.Windows.Forms.ToolStripStatusLabel lblNivel;
+        private System.Windows.Forms.Timer relogio;
     }
 }
 

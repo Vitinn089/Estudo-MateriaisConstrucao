@@ -16,24 +16,24 @@ namespace AcessoDados
 
         public DataTable Listar()
         {
-            using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
+            try
             {
-                try
+                using (SqlConnection conexao = new SqlConnection(Conexao.stringConexao))
                 {
                     conexao.Open();
 
                     sql.Append("SELECT * FROM Nivel_Acesso");
-                    sql.Append(" ORDER BY ID_NIVEL ASC");
+                    sql.Append(" ORDER BY NOME_NIVEL ASC");
 
                     comandoSql.CommandText = sql.ToString();
                     comandoSql.Connection = conexao;
                     dadosTabela.Load(comandoSql.ExecuteReader());
                     return dadosTabela;
                 }
-                catch (Exception)
-                {
-                    throw new Exception("Ocorreu um erro no método 'Listar'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
-                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'Listar'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
             }
         }
 
@@ -45,7 +45,7 @@ namespace AcessoDados
 
                 try
                 {
-                    sql.Append("INSERT INTO Nivel_Acesso(NOME_NIVEL, DESCRICAO_NIVEL");
+                    sql.Append("INSERT INTO Nivel_Acesso(NOME_NIVEL, DESCRICAO_NIVEL)");
                     sql.Append(" VALUES(@nome, @descricao)");
 
                     comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
@@ -88,7 +88,7 @@ namespace AcessoDados
             {
                 cnx.Open();
 
-                sql.Append("DELETE FROM Nivel_Acesso ");
+                sql.Append(" DELETE FROM Nivel_Acesso ");
                 sql.Append("WHERE ID_NIVEL = @idNivel");
 
                 comandoSql.Parameters.Add(new SqlParameter("@idNivel", idNivel));
@@ -96,6 +96,32 @@ namespace AcessoDados
                 comandoSql.CommandText = sql.ToString();
                 comandoSql.Connection = cnx;
                 comandoSql.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable RetornaNivel(string nome)
+        {
+            try
+            {
+                using (SqlConnection cnx = new SqlConnection(Conexao.stringConexao))
+                {
+                    cnx.Open();
+
+                    sql.Append("SELECT * FROM Nivel_Acesso ");
+                    sql.Append("WHERE NOME_NIVEL = @nome ");
+                    sql.Append("ORDER BY ID_NIVEL ASC");
+
+                    comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
+
+                    comandoSql.CommandText = sql.ToString();
+                    comandoSql.Connection = cnx;
+                    dadosTabela.Load(comandoSql.ExecuteReader());
+                    return dadosTabela;
+                }
+            }
+            catch (Exception)
+            {
+                throw new Exception("Ocorreu um erro no método 'RetornaNivel'. Caso o erro persista, entre em contato com o Administrador do Sistema.");
             }
         }
     }

@@ -31,3 +31,6 @@ C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisP
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\Regra.pdb
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\bin\Debug\Acesso.pdb
 C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.csproj.CopyComplete
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmNivel.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmUsuarios.resources
+C:\Users\Vitinn\Documents\Programação\Git\Local\MateriaisConstrucao\MateriaisParaConstrucao\obj\Debug\MateriaisParaConstrucao.frmLogin.resources

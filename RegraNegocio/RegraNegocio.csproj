@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="ClientesRegraNegocio.cs" />
     <Compile Include="FuncionariosRegraNegocio.cs" />
+    <Compile Include="NivelRegraNegocio.cs" />
     <Compile Include="ProdutosRegraNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioRegraNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AcessoDados\AcessoDados.csproj">

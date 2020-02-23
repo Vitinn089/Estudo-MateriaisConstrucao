@@ -45,7 +45,7 @@ namespace AcessoDados
                 {
                     cnx.Open();
 
-                    sql.Append("INSERT INTO Usuarios (NOME_USUARIO, DATA_CADASTRO, LOGIN_USUARIO, SENHA_USUARIO, STATUS_USUARIO, ID_NIVEL");
+                    sql.Append("INSERT INTO Usuarios (NOME_USUARIO, DATA_CADASTRO, LOGIN_USUARIO, SENHA_USUARIO, STATUS_USUARIO, ID_NIVEL)");
                     sql.Append(" VALUES (@nome, @cadastro, @login, @senha, @status, @idNivel)");
 
                     comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
@@ -66,7 +66,7 @@ namespace AcessoDados
             }
         }
 
-        public void Alterar(int idUsuario, string nome, DateTime cadastro, string login, string senha, string status, int idNivel)
+        public void Alterar(int idUsuario, string nome, string login, string senha, string status, int idNivel)
         {
             try
             {
@@ -74,13 +74,12 @@ namespace AcessoDados
                 {
                     cnx.Open();
 
-                    sql.Append("UPDATE Usuario SET NOME_USUARIO = @nome, DATA_CADASTRO = @cadastro, LOGIN_USUARIO = @login, SENHA_USUARIO = @senha,");
+                    sql.Append("UPDATE Usuarios SET NOME_USUARIO = @nome, LOGIN_USUARIO = @login, SENHA_USUARIO = @senha,");
                     sql.Append(" STATUS_USUARIO = @status, ID_NIVEL = @idNivel ");
                     sql.Append("WHERE ID_USUARIO = @idUsuario");
 
                     comandoSql.Parameters.Add(new SqlParameter("@idUsuario", idUsuario));
                     comandoSql.Parameters.Add(new SqlParameter("@nome", nome));
-                    comandoSql.Parameters.Add(new SqlParameter("@cadastro", cadastro));
                     comandoSql.Parameters.Add(new SqlParameter("@login", login));
                     comandoSql.Parameters.Add(new SqlParameter("@senha", senha));
                     comandoSql.Parameters.Add(new SqlParameter("@status", status));
@@ -156,8 +155,8 @@ namespace AcessoDados
                 {
                     cnx.Open();
 
-                    sql.Append("SELECT * Usuarios ");
-                    sql.Append("WHERE LOGIN_USUARIO = @login");
+                    sql.Append("SELECT * FROM Usuarios ");
+                    sql.Append("WHERE LOGIN_USUARIO = @login ORDER BY ID_USUARIO ASC");
 
                     comandoSql.Parameters.Add(new SqlParameter("@login", login));
 
@@ -173,7 +172,7 @@ namespace AcessoDados
             }
         }
 
-        public DataTable RetornarUsuario(string idUsuario)
+        public DataTable RetornarUsuario(int idUsuario)
         {
             try
             {
